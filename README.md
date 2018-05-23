@@ -7,4 +7,20 @@
 
 ## 基本组件
 - ThreadPool.h : C++ 11 实现的线程池
-- 
+
+
+## 目录结构
+    .
+    ├── CMakeLists.txt  
+    ├── lib			
+    │   └── googletest
+    ├── main.cpp
+    ├── problems.md
+    ├── push2master.sh
+    ├── README.md
+    ├── server
+    │   └── base
+    ├── Tests
+    │   └── test.cpp
+    └── 更新记录.md
+
