@@ -18,8 +18,6 @@
     <list default="true" id="57afabd1-fcb9-4ffd-83da-f854abe25cde" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/problems.md" beforeDir="false" afterPath="$PROJECT_DIR$/problems.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/更新记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/更新记录.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/lib/googletest/googlemock/CMakeFiles/" />
@@ -78,8 +76,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="47">
-                <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <first_editor relative-caret-position="773">
+                <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -236,7 +234,7 @@
       <updated>1527170832567</updated>
       <workItem from="1527170839646" duration="545000" />
       <workItem from="1527323158229" duration="288000" />
-      <workItem from="1527590465740" duration="13613000" />
+      <workItem from="1527590465740" duration="13993000" />
     </task>
     <task id="LOCAL-00001" summary="add base.h(class NonCopyable)">
       <created>1527602369289</created>
@@ -280,7 +278,35 @@
       <option name="project" value="LOCAL" />
       <updated>1527602824332</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add problem">
+      <created>1527605552236</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527605552236</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update readme file">
+      <created>1527605567078</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527605567078</updated>
+    </task>
+    <task id="LOCAL-00009" summary="05.28更新">
+      <created>1527605585000</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527605585000</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change project file">
+      <created>1527605607510</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527605607510</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -316,13 +342,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14446000" />
+    <option name="totallyTimeSpent" value="14826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36939314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36939314" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32903227" />
       <window_info anchor="bottom" id="CMake" order="7" />
@@ -394,7 +420,11 @@
     <MESSAGE value="add CountDownLatch in namespace selfServer" />
     <MESSAGE value="add LogFile.h/cpp" />
     <MESSAGE value="add daily build" />
-    <option name="LAST_COMMIT_MESSAGE" value="add daily build" />
+    <MESSAGE value="add problem" />
+    <MESSAGE value="update readme file" />
+    <MESSAGE value="05.28更新" />
+    <MESSAGE value="change project file" />
+    <option name="LAST_COMMIT_MESSAGE" value="change project file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,8 +614,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="47">
-            <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <first_editor relative-caret-position="773">
+            <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
