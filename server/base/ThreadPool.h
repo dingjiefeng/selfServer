@@ -15,6 +15,8 @@
 #include <type_traits>
 #include <utility>
 #include <vector>
+#include <iostream>
+#include "base.h"
 
 // C++11 版的 线程池
 /**
@@ -26,7 +28,7 @@ namespace selfServer
     /**
      *@brief 线程管理类
      */
-    class ThreadsGuard
+class ThreadsGuard : public NonCopyable
     {
     public:
 
@@ -39,8 +41,7 @@ namespace selfServer
         /**
          * @brief 析构函数,等待所有线程运行结束释放资源
          */
-        ~ThreadsGuard()
-        {
+        ~ThreadsGuard() override {
             for (size_t i = 0; i != threads_.size(); ++i)
             {
                 if (threads_[i].joinable())
@@ -52,17 +53,17 @@ namespace selfServer
 
     private:
         //将拷贝构造函数等申明为delete,避免自动生成
-        ThreadsGuard(ThreadsGuard&& tg) = delete;
-        ThreadsGuard& operator = (ThreadsGuard&& tg) = delete;
+//        ThreadsGuard(ThreadsGuard&& tg) = delete;
+//        ThreadsGuard& operator = (ThreadsGuard&& tg) = delete;
 
-        ThreadsGuard(const ThreadsGuard&) = delete;
-        ThreadsGuard& operator = (const ThreadsGuard&) = delete;
+//        ThreadsGuard(const ThreadsGuard&) = delete;
+//        ThreadsGuard& operator = (const ThreadsGuard&) = delete;
     private:
         std::vector<std::thread>& threads_; //线程vector的引用
     };
 
 
-    class ThreadPool
+    class ThreadPool : public NonCopyable
     {
     public:
         typedef std::function<void()> task_type;
@@ -73,7 +74,7 @@ namespace selfServer
         /**
          * @brief 线程管理类自动释放资源,无需显示的释放线程
          */
-        ~ThreadPool()
+        ~ThreadPool () override
         {
             stop();
             cond_.notify_all();
@@ -94,10 +95,10 @@ namespace selfServer
         std::future<typename std::result_of<Function(Args...)>::type> add(Function&&, Args&&...);
 
     public:
-        ThreadPool(ThreadPool&&) = delete;
-        ThreadPool& operator = (ThreadPool&&) = delete;
-        ThreadPool(const ThreadPool&) = delete;
-        ThreadPool& operator = (const ThreadPool&) = delete;
+//        ThreadPool(ThreadPool&&) = delete;
+//        ThreadPool& operator = (ThreadPool&&) = delete;
+//        ThreadPool(const ThreadPool&) = delete;
+//        ThreadPool& operator = (const ThreadPool&) = delete;
 
     private:
         std::atomic<bool> stop_;

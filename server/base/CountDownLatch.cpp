@@ -4,6 +4,8 @@
 
 #include "CountDownLatch.h"
 
+using namespace selfServer;
+
 CountDownLatch::CountDownLatch(int count):
 m_mutex(),
 m_condition(),
