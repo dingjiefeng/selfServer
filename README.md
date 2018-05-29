@@ -7,7 +7,10 @@
 本项目系统环境为deepin 15,在Clion下进行代码编写的工作,目前上传的也是Clion工程的版本,集合了单元测试等工具
 
 ## 基本组件
+- base.h : NonCopyable类
 - ThreadPool.h : C++ 11 实现的线程池
+- CountDownLatch.h/cpp : 倒计时门栓
+- FileUtil.h/cpp : Log文件使用到的基本单元
 
 
 ## 目录结构
