@@ -153,12 +153,87 @@ CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o.provides: CMakeFiles/we
 CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o
 
 
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: ../server/base/LogFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/webServer.dir/server/base/LogFile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/base/LogFile.cpp.o -c /home/jeff/Desktop/selfServer/server/base/LogFile.cpp
+
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/base/LogFile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/base/LogFile.cpp > CMakeFiles/webServer.dir/server/base/LogFile.cpp.i
+
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/base/LogFile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/base/LogFile.cpp -o CMakeFiles/webServer.dir/server/base/LogFile.cpp.s
+
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.provides: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.provides.build: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o
+
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o: ../server/base/FileUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o -c /home/jeff/Desktop/selfServer/server/base/FileUtil.cpp
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/base/FileUtil.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/base/FileUtil.cpp > CMakeFiles/webServer.dir/server/base/FileUtil.cpp.i
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/base/FileUtil.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/base/FileUtil.cpp -o CMakeFiles/webServer.dir/server/base/FileUtil.cpp.s
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.provides: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.provides.build: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o
+
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o: ../Tests/test_FileUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o -c /home/jeff/Desktop/selfServer/Tests/test_FileUtil.cpp
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/Tests/test_FileUtil.cpp > CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.i
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/Tests/test_FileUtil.cpp -o CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.s
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.requires
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides
+
+CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o
+
+
 # Object files for target webServer
 webServer_OBJECTS = \
 "CMakeFiles/webServer.dir/main.cpp.o" \
 "CMakeFiles/webServer.dir/Tests/test.cpp.o" \
 "CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o" \
-"CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o"
+"CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o" \
+"CMakeFiles/webServer.dir/server/base/LogFile.cpp.o" \
+"CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o" \
+"CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o"
 
 # External object files for target webServer
 webServer_EXTERNAL_OBJECTS =
@@ -167,12 +242,15 @@ webServer: CMakeFiles/webServer.dir/main.cpp.o
 webServer: CMakeFiles/webServer.dir/Tests/test.cpp.o
 webServer: CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o
 webServer: CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o
+webServer: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o
+webServer: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o
+webServer: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o
 webServer: CMakeFiles/webServer.dir/build.make
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: lib/googletest/googlemock/gtest/libgtest_maind.a
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: CMakeFiles/webServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable webServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable webServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/webServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -184,6 +262,9 @@ CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/main.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.requires
 
 .PHONY : CMakeFiles/webServer.dir/requires
 

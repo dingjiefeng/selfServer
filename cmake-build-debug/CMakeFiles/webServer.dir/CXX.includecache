@@ -491,6 +491,12 @@ utility
 -
 vector
 -
+iostream
+-
+base.h
+/home/jeff/Desktop/selfServer/./server/base/base.h
+
+/home/jeff/Desktop/selfServer/./server/base/base.h
 
 /home/jeff/Desktop/selfServer/Tests/test.cpp
 gtest/gtest.h
@@ -511,6 +517,14 @@ iostream
 /home/jeff/Desktop/selfServer/server/base/CountDownLatch.h
 ../server/base/ThreadPool.h
 /home/jeff/Desktop/selfServer/server/base/ThreadPool.h
+
+/home/jeff/Desktop/selfServer/Tests/test_FileUtil.cpp
+gtest/gtest.h
+/home/jeff/Desktop/selfServer/Tests/gtest/gtest.h
+gmock/gmock.h
+/home/jeff/Desktop/selfServer/Tests/gmock/gmock.h
+../server/base/FileUtil.h
+/home/jeff/Desktop/selfServer/server/base/FileUtil.h
 
 /home/jeff/Desktop/selfServer/main.cpp
 iostream
@@ -533,6 +547,30 @@ condition_variable
 -
 mutex
 -
+base.h
+/home/jeff/Desktop/selfServer/server/base/base.h
+
+/home/jeff/Desktop/selfServer/server/base/FileUtil.cpp
+cassert
+-
+cstring
+-
+FileUtil.h
+/home/jeff/Desktop/selfServer/server/base/FileUtil.h
+
+/home/jeff/Desktop/selfServer/server/base/FileUtil.h
+string
+-
+base.h
+/home/jeff/Desktop/selfServer/server/base/base.h
+
+/home/jeff/Desktop/selfServer/server/base/LogFile.cpp
+LogFile.h
+/home/jeff/Desktop/selfServer/server/base/LogFile.h
+
+/home/jeff/Desktop/selfServer/server/base/LogFile.h
+base.h
+/home/jeff/Desktop/selfServer/server/base/base.h
 
 /home/jeff/Desktop/selfServer/server/base/ThreadPool.h
 thread
@@ -555,4 +593,10 @@ utility
 -
 vector
 -
+iostream
+-
+base.h
+/home/jeff/Desktop/selfServer/server/base/base.h
+
+/home/jeff/Desktop/selfServer/server/base/base.h
 

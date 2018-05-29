@@ -275,6 +275,33 @@ Tests/test_CountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.s
 .PHONY : Tests/test_CountDownLatch.cpp.s
 
+Tests/test_FileUtil.o: Tests/test_FileUtil.cpp.o
+
+.PHONY : Tests/test_FileUtil.o
+
+# target to build an object file
+Tests/test_FileUtil.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o
+.PHONY : Tests/test_FileUtil.cpp.o
+
+Tests/test_FileUtil.i: Tests/test_FileUtil.cpp.i
+
+.PHONY : Tests/test_FileUtil.i
+
+# target to preprocess a source file
+Tests/test_FileUtil.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.i
+.PHONY : Tests/test_FileUtil.cpp.i
+
+Tests/test_FileUtil.s: Tests/test_FileUtil.cpp.s
+
+.PHONY : Tests/test_FileUtil.s
+
+# target to generate assembly for a file
+Tests/test_FileUtil.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.s
+.PHONY : Tests/test_FileUtil.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -329,6 +356,60 @@ server/base/CountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.s
 .PHONY : server/base/CountDownLatch.cpp.s
 
+server/base/FileUtil.o: server/base/FileUtil.cpp.o
+
+.PHONY : server/base/FileUtil.o
+
+# target to build an object file
+server/base/FileUtil.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o
+.PHONY : server/base/FileUtil.cpp.o
+
+server/base/FileUtil.i: server/base/FileUtil.cpp.i
+
+.PHONY : server/base/FileUtil.i
+
+# target to preprocess a source file
+server/base/FileUtil.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/FileUtil.cpp.i
+.PHONY : server/base/FileUtil.cpp.i
+
+server/base/FileUtil.s: server/base/FileUtil.cpp.s
+
+.PHONY : server/base/FileUtil.s
+
+# target to generate assembly for a file
+server/base/FileUtil.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/FileUtil.cpp.s
+.PHONY : server/base/FileUtil.cpp.s
+
+server/base/LogFile.o: server/base/LogFile.cpp.o
+
+.PHONY : server/base/LogFile.o
+
+# target to build an object file
+server/base/LogFile.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogFile.cpp.o
+.PHONY : server/base/LogFile.cpp.o
+
+server/base/LogFile.i: server/base/LogFile.cpp.i
+
+.PHONY : server/base/LogFile.i
+
+# target to preprocess a source file
+server/base/LogFile.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogFile.cpp.i
+.PHONY : server/base/LogFile.cpp.i
+
+server/base/LogFile.s: server/base/LogFile.cpp.s
+
+.PHONY : server/base/LogFile.s
+
+# target to generate assembly for a file
+server/base/LogFile.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogFile.cpp.s
+.PHONY : server/base/LogFile.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -352,12 +433,21 @@ help:
 	@echo "... Tests/test_CountDownLatch.o"
 	@echo "... Tests/test_CountDownLatch.i"
 	@echo "... Tests/test_CountDownLatch.s"
+	@echo "... Tests/test_FileUtil.o"
+	@echo "... Tests/test_FileUtil.i"
+	@echo "... Tests/test_FileUtil.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... server/base/CountDownLatch.o"
 	@echo "... server/base/CountDownLatch.i"
 	@echo "... server/base/CountDownLatch.s"
+	@echo "... server/base/FileUtil.o"
+	@echo "... server/base/FileUtil.i"
+	@echo "... server/base/FileUtil.s"
+	@echo "... server/base/LogFile.o"
+	@echo "... server/base/LogFile.i"
+	@echo "... server/base/LogFile.s"
 .PHONY : help
 
 

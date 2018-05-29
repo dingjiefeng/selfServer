@@ -342,6 +342,9 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/Tests/test_CountDownLatch.cpp">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/Tests/test_FileUtil.cpp">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/lib/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -363,7 +366,22 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/server/base/CountDownLatch.h">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/FileUtil.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/FileUtil.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/LogFile.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/LogFile.h">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/base/ThreadPool.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/base.h">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/CMakeLists.txt">

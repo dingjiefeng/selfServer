@@ -8,6 +8,7 @@
 #include "../server/base/CountDownLatch.h"
 #include "../server/base/ThreadPool.h"
 
+using namespace selfServer;
 
 using testing::Eq;
 
