@@ -16,14 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57afabd1-fcb9-4ffd-83da-f854abe25cde" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/test_LogFile.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/base/LogStream.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/base/LogStream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/base/Logging.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/base/Logging.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
@@ -47,8 +40,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/gtest/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/gtest/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/webServer" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/webServer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/webServer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/webServer.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/base/LogFile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/base/LogFile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/base/LogFile.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/base/LogFile.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/lib/googletest/googlemock/CMakeFiles/" />
@@ -96,8 +87,8 @@
       <file leaf-file-name="LogStream.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            <state relative-caret-position="440">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#99#116#0" expanded="true" />
                 <element signature="e#279#289#0" expanded="true" />
@@ -291,7 +282,7 @@
       <workItem from="1527323158229" duration="288000" />
       <workItem from="1527590465740" duration="15141000" />
       <workItem from="1527641576734" duration="8272000" />
-      <workItem from="1527663665133" duration="8937000" />
+      <workItem from="1527663665133" duration="9401000" />
     </task>
     <task id="LOCAL-00001" summary="add base.h(class NonCopyable)">
       <created>1527602369289</created>
@@ -391,7 +382,49 @@
       <option name="project" value="LOCAL" />
       <updated>1527606427571</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add daily build">
+      <created>1527688783970</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688783970</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add test of LogFile">
+      <created>1527688837300</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688837300</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add LogFile.h/cpp">
+      <created>1527688880547</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688880547</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add Logging.h/cpp">
+      <created>1527688899738</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688899738</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add LogStream.h/cpp">
+      <created>1527688927067</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688927067</updated>
+    </task>
+    <task id="LOCAL-00020" summary="modify CMakeLists.txt">
+      <created>1527688959252</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1527688959252</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -427,7 +460,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33183000" />
+    <option name="totallyTimeSpent" value="33647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1082" extended-state="6" />
@@ -502,14 +535,19 @@
     <MESSAGE value="add FileUtil.h/cpp and test file of FileUtil" />
     <MESSAGE value="增加了base.h后,作相应修改" />
     <MESSAGE value="add CountDownLatch in namespace selfServer" />
-    <MESSAGE value="add LogFile.h/cpp" />
-    <MESSAGE value="add daily build" />
     <MESSAGE value="add problem" />
     <MESSAGE value="05.28更新" />
     <MESSAGE value="change project file" />
     <MESSAGE value="update readme file" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add daily build" />
+    <MESSAGE value="add test of LogFile" />
+    <MESSAGE value="add LogFile.h/cpp" />
+    <MESSAGE value="add Logging.h/cpp" />
+    <MESSAGE value="add LogStream.h/cpp" />
+    <MESSAGE value="modify CMakeLists.txt" />
+    <MESSAGE value="daily update" />
+    <option name="LAST_COMMIT_MESSAGE" value="daily update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -848,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="440">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="e#99#116#0" expanded="true" />
             <element signature="e#279#289#0" expanded="true" />
