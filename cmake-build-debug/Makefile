@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E remove -f
+RM = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,31 +59,31 @@ CMAKE_BINARY_DIR = /home/jeff/Desktop/selfServer/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -94,7 +94,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -105,13 +105,13 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -302,6 +302,33 @@ Tests/test_FileUtil.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.s
 .PHONY : Tests/test_FileUtil.cpp.s
 
+Tests/test_LogFile.o: Tests/test_LogFile.cpp.o
+
+.PHONY : Tests/test_LogFile.o
+
+# target to build an object file
+Tests/test_LogFile.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o
+.PHONY : Tests/test_LogFile.cpp.o
+
+Tests/test_LogFile.i: Tests/test_LogFile.cpp.i
+
+.PHONY : Tests/test_LogFile.i
+
+# target to preprocess a source file
+Tests/test_LogFile.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.i
+.PHONY : Tests/test_LogFile.cpp.i
+
+Tests/test_LogFile.s: Tests/test_LogFile.cpp.s
+
+.PHONY : Tests/test_LogFile.s
+
+# target to generate assembly for a file
+Tests/test_LogFile.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.s
+.PHONY : Tests/test_LogFile.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -410,6 +437,60 @@ server/base/LogFile.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogFile.cpp.s
 .PHONY : server/base/LogFile.cpp.s
 
+server/base/LogStream.o: server/base/LogStream.cpp.o
+
+.PHONY : server/base/LogStream.o
+
+# target to build an object file
+server/base/LogStream.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogStream.cpp.o
+.PHONY : server/base/LogStream.cpp.o
+
+server/base/LogStream.i: server/base/LogStream.cpp.i
+
+.PHONY : server/base/LogStream.i
+
+# target to preprocess a source file
+server/base/LogStream.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogStream.cpp.i
+.PHONY : server/base/LogStream.cpp.i
+
+server/base/LogStream.s: server/base/LogStream.cpp.s
+
+.PHONY : server/base/LogStream.s
+
+# target to generate assembly for a file
+server/base/LogStream.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogStream.cpp.s
+.PHONY : server/base/LogStream.cpp.s
+
+server/base/Logging.o: server/base/Logging.cpp.o
+
+.PHONY : server/base/Logging.o
+
+# target to build an object file
+server/base/Logging.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/Logging.cpp.o
+.PHONY : server/base/Logging.cpp.o
+
+server/base/Logging.i: server/base/Logging.cpp.i
+
+.PHONY : server/base/Logging.i
+
+# target to preprocess a source file
+server/base/Logging.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/Logging.cpp.i
+.PHONY : server/base/Logging.cpp.i
+
+server/base/Logging.s: server/base/Logging.cpp.s
+
+.PHONY : server/base/Logging.s
+
+# target to generate assembly for a file
+server/base/Logging.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/Logging.cpp.s
+.PHONY : server/base/Logging.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -436,6 +517,9 @@ help:
 	@echo "... Tests/test_FileUtil.o"
 	@echo "... Tests/test_FileUtil.i"
 	@echo "... Tests/test_FileUtil.s"
+	@echo "... Tests/test_LogFile.o"
+	@echo "... Tests/test_LogFile.i"
+	@echo "... Tests/test_LogFile.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -448,6 +532,12 @@ help:
 	@echo "... server/base/LogFile.o"
 	@echo "... server/base/LogFile.i"
 	@echo "... server/base/LogFile.s"
+	@echo "... server/base/LogStream.o"
+	@echo "... server/base/LogStream.i"
+	@echo "... server/base/LogStream.s"
+	@echo "... server/base/Logging.o"
+	@echo "... server/base/Logging.i"
+	@echo "... server/base/Logging.s"
 .PHONY : help
 
 

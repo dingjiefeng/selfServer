@@ -526,6 +526,14 @@ gmock/gmock.h
 ../server/base/FileUtil.h
 /home/jeff/Desktop/selfServer/server/base/FileUtil.h
 
+/home/jeff/Desktop/selfServer/Tests/test_LogFile.cpp
+gtest/gtest.h
+/home/jeff/Desktop/selfServer/Tests/gtest/gtest.h
+gmock/gmock.h
+/home/jeff/Desktop/selfServer/Tests/gmock/gmock.h
+../server/base/LogFile.h
+/home/jeff/Desktop/selfServer/server/base/LogFile.h
+
 /home/jeff/Desktop/selfServer/main.cpp
 iostream
 -
@@ -565,12 +573,28 @@ base.h
 /home/jeff/Desktop/selfServer/server/base/base.h
 
 /home/jeff/Desktop/selfServer/server/base/LogFile.cpp
+cassert
+-
+memory
+-
+thread
+-
 LogFile.h
 /home/jeff/Desktop/selfServer/server/base/LogFile.h
+FileUtil.h
+/home/jeff/Desktop/selfServer/server/base/FileUtil.h
 
 /home/jeff/Desktop/selfServer/server/base/LogFile.h
+string
+-
+bits/unique_ptr.h
+-
+mutex
+-
 base.h
 /home/jeff/Desktop/selfServer/server/base/base.h
+FileUtil.h
+/home/jeff/Desktop/selfServer/server/base/FileUtil.h
 
 /home/jeff/Desktop/selfServer/server/base/ThreadPool.h
 thread

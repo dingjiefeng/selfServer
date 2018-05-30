@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E remove -f
+RM = /home/jeff/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -225,6 +225,78 @@ CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides: CMakeFiles/webServe
 CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o
 
 
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o: ../Tests/test_LogFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o -c /home/jeff/Desktop/selfServer/Tests/test_LogFile.cpp
+
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/Tests/test_LogFile.cpp > CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.i
+
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/Tests/test_LogFile.cpp -o CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.s
+
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.requires
+
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.provides: CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.provides
+
+CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o
+
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/Logging.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/webServer.dir/server/base/Logging.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/base/Logging.cpp.o -c /home/jeff/Desktop/selfServer/server/base/Logging.cpp
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/base/Logging.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/base/Logging.cpp > CMakeFiles/webServer.dir/server/base/Logging.cpp.i
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/base/Logging.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/base/Logging.cpp -o CMakeFiles/webServer.dir/server/base/Logging.cpp.s
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/base/Logging.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o.provides: CMakeFiles/webServer.dir/server/base/Logging.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/Logging.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/base/Logging.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o.provides.build: CMakeFiles/webServer.dir/server/base/Logging.cpp.o
+
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o: ../server/base/LogStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/webServer.dir/server/base/LogStream.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/base/LogStream.cpp.o -c /home/jeff/Desktop/selfServer/server/base/LogStream.cpp
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/base/LogStream.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/base/LogStream.cpp > CMakeFiles/webServer.dir/server/base/LogStream.cpp.i
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/base/LogStream.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/base/LogStream.cpp -o CMakeFiles/webServer.dir/server/base/LogStream.cpp.s
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.provides: CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.provides.build: CMakeFiles/webServer.dir/server/base/LogStream.cpp.o
+
+
 # Object files for target webServer
 webServer_OBJECTS = \
 "CMakeFiles/webServer.dir/main.cpp.o" \
@@ -233,7 +305,10 @@ webServer_OBJECTS = \
 "CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o" \
 "CMakeFiles/webServer.dir/server/base/LogFile.cpp.o" \
 "CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o" \
-"CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o"
+"CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o" \
+"CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o" \
+"CMakeFiles/webServer.dir/server/base/Logging.cpp.o" \
+"CMakeFiles/webServer.dir/server/base/LogStream.cpp.o"
 
 # External object files for target webServer
 webServer_EXTERNAL_OBJECTS =
@@ -245,12 +320,15 @@ webServer: CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o
 webServer: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o
 webServer: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o
 webServer: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o
+webServer: CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o
+webServer: CMakeFiles/webServer.dir/server/base/Logging.cpp.o
+webServer: CMakeFiles/webServer.dir/server/base/LogStream.cpp.o
 webServer: CMakeFiles/webServer.dir/build.make
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: lib/googletest/googlemock/gtest/libgtest_maind.a
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: CMakeFiles/webServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable webServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable webServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/webServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -265,6 +343,9 @@ CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test_CountDown
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/LogFile.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/FileUtil.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test_FileUtil.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/Logging.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/base/LogStream.cpp.o.requires
 
 .PHONY : CMakeFiles/webServer.dir/requires
 
