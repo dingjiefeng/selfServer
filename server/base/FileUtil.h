@@ -16,7 +16,7 @@ public:
     explicit AppendFile(std::string filename);
     ~AppendFile() override;
 
-    //append 向文件写
+    //append 向文件写,实际是先写入缓冲区
     void append(const char *logline, size_t len);
     void flush();
 
