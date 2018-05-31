@@ -12,8 +12,12 @@
 #include "FileUtil.h"
 
 namespace selfServer{
+    /**
+     * @brief LogFile类,log文件的基础类,主要作用在于负责log文件的生成与滚动
+     */
     class LogFile : public NonCopyable{
     public:
+
         explicit LogFile(const std::string& basename,
                          off_t rollsize,
                          bool threadSafe = true,
