@@ -9,13 +9,13 @@ using namespace selfServer;
 using namespace selfServer::detail;
 
 template <int SIZE>
-void FixedBuffer::cookieStart()
+void FixedBuffer<SIZE>::cookieStart()
 {
 
 }
 
 template <int SIZE>
-void FixedBuffer::cookieEnd()
+void FixedBuffer<SIZE>::cookieEnd()
 {
 
 }
