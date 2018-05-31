@@ -13,7 +13,7 @@ class TestLogFile : public testing::Test
 {
 public:
     TestLogFile()
-            :mp_lf(new LogFile("/home/jeff/Desktop/selfServer/Tests/FileLogDemo.txt", 2))
+            :mp_lf(new LogFile("/home/jeff/Desktop/selfServer/Tests/selfServer", 200))
     {
 
     }
