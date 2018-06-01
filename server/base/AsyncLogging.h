@@ -6,7 +6,6 @@
 #define WEBSERVER_ASYNCLOGGING_H
 
 #include <vector>
-#include <bits/shared_ptr.h>
 #include <thread>
 #include "base.h"
 #include "LogStream.h"
@@ -14,11 +13,14 @@
 
 namespace selfServer
 {
+    /**
+     * @brief 主要负责多缓冲技术 协调前后端,更换缓冲区
+     */
     class AsyncLogging : NonCopyable
     {
     public:
-        AsyncLogging(const std::string& basename,
-                     off_t rollSize,
+        explicit AsyncLogging(const std::string& basename,
+                     off_t rollSize = 1024,
                      int flushInterval = 3);
 
         ~AsyncLogging() override
@@ -31,16 +33,23 @@ namespace selfServer
 
         void append(const char* logline, int len);
 
+        /**
+         * @brief 启动工作线程
+         */
         void start()
         {
             m_running = true;
+            m_thread = std::thread(std::bind(&AsyncLogging::threadFunc, this));
             m_latch.wait();
         }
 
+        /**
+         * @brief 关闭工作线程
+         */
         void stop()
         {
             m_running = false;
-            m_cond.notify_all();
+            m_cond.notify_one();
             m_thread.join();
         }
 
@@ -49,8 +58,8 @@ namespace selfServer
         void threadFunc();
 
         typedef selfServer::detail::FixedBuffer<detail::kLargeBuffer> Buffer;
-        typedef std::vector<std::shared_ptr<Buffer>> BufferVector;
-        typedef std::shared_ptr<Buffer> BufferPtr;
+        typedef std::unique_ptr<Buffer> BufferPtr;
+        typedef std::vector<BufferPtr> BufferVector;
 
         const int m_flushInterval;
         bool m_running;
