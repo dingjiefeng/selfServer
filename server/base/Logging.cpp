@@ -4,14 +4,24 @@
 
 #include <sys/time.h>
 #include "Logging.h"
+#include "AsyncLogging.h"
 
+using namespace selfServer;
+static std::unique_ptr<AsyncLogging> gp_AsyncLogger;
 
+std::string Logger::g_logFileName = "selfServer.log";
 namespace selfServer
 {
 
+    void once_init()
+    {
+//        std::string str(Logger::getLogFileName());
+        gp_AsyncLogger.reset(new AsyncLogging(Logger::g_logFileName));
+        gp_AsyncLogger->start();
+    }
     void output(const char* msg, int len)
     {
-
+        gp_AsyncLogger->append(msg, len);
     }
 
     Logger::Impl::Impl(const char *file, int line)
@@ -32,12 +42,14 @@ namespace selfServer
     }
     Logger::Logger(const char *file, int line)
         : m_impl(file, line)
-    {}
+    {
+
+    }
 
     Logger::~Logger()
     {
-        m_impl.finish();
-        const LogStream::Buffer& buf(stream().buffer());
+        m_impl.m_stream << " -- " << m_impl.m_basename << ':' << m_impl.m_line << '\n';
+        const LogStream::Buffer& buf(Logger::stream().buffer());
         output(buf.data(), buf.length());
     }
 }

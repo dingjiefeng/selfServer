@@ -20,11 +20,17 @@ namespace selfServer
 
         LogStream& stream() { return m_impl.m_stream;}
 
-        typedef std::function<void(const char*, int)> OutputFunc;
-        typedef std::function<void()> FlushFunc;
+        static void setLogFileName(std::string &fileName)
+        {
+            g_logFileName = fileName;
+        }
 
-        static void setOutput(OutputFunc);
-        static void setFlush(FlushFunc);
+//        static std::string getLogFileName()
+//        {
+//            std::string str(g_logFileName);
+//            return str;
+//        }
+        static std::string g_logFileName;
 
     private:
 
@@ -33,7 +39,6 @@ namespace selfServer
         public:
             Impl(const char* file, int line);
             void formatTime();
-            void finish();
 
             LogStream m_stream;
             int m_line;
@@ -45,7 +50,6 @@ namespace selfServer
 
 
 #define LOG selfServer::Logger(__FILE__, __LINE__).stream()
-
 
 }
 #endif //WEBSERVER_LOGGING_H
