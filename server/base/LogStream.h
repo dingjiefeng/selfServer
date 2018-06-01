@@ -11,6 +11,11 @@
 #include <string>
 #include <functional>
 
+/**
+ * @brief 本文件中主要定义了FixBuffer和LogStream,LogStream中含有一个buffer,
+ *        LogStream相当于提供了一层对buffer的封装,方便各种类型写入buffer,
+ *        LogStream与buffer单次可以写入的大小有限;LogStream可以调用buffer()返回buffer
+ */
 namespace selfServer
 {
     namespace detail
@@ -26,12 +31,8 @@ namespace selfServer
                     : m_data(),
                       mp_cur(m_data)
             {
-                setCookie(cookieStart);
             }
-            ~FixedBuffer() override
-            {
-                setCookie(cookieEnd);
-            }
+            ~FixedBuffer() override = default;
 
             void append(const char* buf, size_t len)
             {
@@ -52,21 +53,12 @@ namespace selfServer
             void reset() { mp_cur = m_data;}
             void bzero() { ::bzero(m_data, sizeof(m_data));}
 
-            void setCookie(void (*cookie)()) { mpf_cookie = cookie;}
-
+            //用作unit test
             std::string toString() const { return std::string(m_data, static_cast<unsigned long>(length()));}
-
-
 
         private:
             const char* end() const { return m_data+ sizeof(m_data);}
 
-            static void cookieStart();
-            static void cookieEnd();
-
-
-            std::function<void()> mpf_cookie;
-//            void (*mpf_cookie)();
             char m_data[SIZE];
             char* mp_cur;
         };
@@ -91,7 +83,6 @@ namespace selfServer
         self&operator<<(unsigned long);
         self&operator<<(unsigned long long);
 
-        self&operator<<(const void*);
 
         self&operator<<(double);
 
@@ -136,7 +127,6 @@ namespace selfServer
         void resetBuffer() { m_buffer.reset();}
 
     private:
-        void staticCheck();
 
         template <typename T>
         void formatInteger(T);
