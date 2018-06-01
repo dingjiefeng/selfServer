@@ -175,6 +175,49 @@ CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o: ../server/base/FileUtil.h
 CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o: ../server/base/LogFile.h
 CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o: ../server/base/base.h
 
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-actions.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-generated-actions.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-generated-matchers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-generated-nice-strict.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-matchers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-more-actions.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-more-matchers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-spec-builders.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-matchers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-port.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/gmock-generated-internal-utils.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googlemock/include/gmock/internal/gmock-port.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-death-test.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-message.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-param-test.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-printers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-test-part.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest-typed-test.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest_pred_impl.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/gtest_prod.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-filepath.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-internal.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-param-util.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-port.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-string.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-tuple.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../Tests/test_LogStream.cpp
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../server/base/LogStream.h
+CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o: ../server/base/base.h
+
 CMakeFiles/webServer.dir/main.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-actions.h
 CMakeFiles/webServer.dir/main.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
 CMakeFiles/webServer.dir/main.cpp.o: ../lib/googletest/googlemock/include/gmock/gmock-generated-actions.h
@@ -218,6 +261,14 @@ CMakeFiles/webServer.dir/main.cpp.o: .././server/base/ThreadPool.h
 CMakeFiles/webServer.dir/main.cpp.o: .././server/base/base.h
 CMakeFiles/webServer.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/AsyncLogging.cpp
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/AsyncLogging.h
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/CountDownLatch.h
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/FileUtil.h
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/LogFile.h
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/LogStream.h
+CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o: ../server/base/base.h
+
 CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o: ../server/base/CountDownLatch.cpp
 CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o: ../server/base/CountDownLatch.h
 CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o: ../server/base/base.h
@@ -230,4 +281,15 @@ CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: ../server/base/FileUtil.h
 CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: ../server/base/LogFile.cpp
 CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: ../server/base/LogFile.h
 CMakeFiles/webServer.dir/server/base/LogFile.cpp.o: ../server/base/base.h
+
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o: ../server/base/LogStream.cpp
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o: ../server/base/LogStream.h
+CMakeFiles/webServer.dir/server/base/LogStream.cpp.o: ../server/base/base.h
+
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/AsyncLogging.h
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/CountDownLatch.h
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/LogStream.h
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/Logging.cpp
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/Logging.h
+CMakeFiles/webServer.dir/server/base/Logging.cpp.o: ../server/base/base.h
 

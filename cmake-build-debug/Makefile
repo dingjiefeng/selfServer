@@ -329,6 +329,33 @@ Tests/test_LogFile.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.s
 .PHONY : Tests/test_LogFile.cpp.s
 
+Tests/test_LogStream.o: Tests/test_LogStream.cpp.o
+
+.PHONY : Tests/test_LogStream.o
+
+# target to build an object file
+Tests/test_LogStream.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o
+.PHONY : Tests/test_LogStream.cpp.o
+
+Tests/test_LogStream.i: Tests/test_LogStream.cpp.i
+
+.PHONY : Tests/test_LogStream.i
+
+# target to preprocess a source file
+Tests/test_LogStream.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.i
+.PHONY : Tests/test_LogStream.cpp.i
+
+Tests/test_LogStream.s: Tests/test_LogStream.cpp.s
+
+.PHONY : Tests/test_LogStream.s
+
+# target to generate assembly for a file
+Tests/test_LogStream.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.s
+.PHONY : Tests/test_LogStream.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -355,6 +382,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+server/base/AsyncLogging.o: server/base/AsyncLogging.cpp.o
+
+.PHONY : server/base/AsyncLogging.o
+
+# target to build an object file
+server/base/AsyncLogging.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o
+.PHONY : server/base/AsyncLogging.cpp.o
+
+server/base/AsyncLogging.i: server/base/AsyncLogging.cpp.i
+
+.PHONY : server/base/AsyncLogging.i
+
+# target to preprocess a source file
+server/base/AsyncLogging.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.i
+.PHONY : server/base/AsyncLogging.cpp.i
+
+server/base/AsyncLogging.s: server/base/AsyncLogging.cpp.s
+
+.PHONY : server/base/AsyncLogging.s
+
+# target to generate assembly for a file
+server/base/AsyncLogging.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.s
+.PHONY : server/base/AsyncLogging.cpp.s
 
 server/base/CountDownLatch.o: server/base/CountDownLatch.cpp.o
 
@@ -520,9 +574,15 @@ help:
 	@echo "... Tests/test_LogFile.o"
 	@echo "... Tests/test_LogFile.i"
 	@echo "... Tests/test_LogFile.s"
+	@echo "... Tests/test_LogStream.o"
+	@echo "... Tests/test_LogStream.i"
+	@echo "... Tests/test_LogStream.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... server/base/AsyncLogging.o"
+	@echo "... server/base/AsyncLogging.i"
+	@echo "... server/base/AsyncLogging.s"
 	@echo "... server/base/CountDownLatch.o"
 	@echo "... server/base/CountDownLatch.i"
 	@echo "... server/base/CountDownLatch.s"

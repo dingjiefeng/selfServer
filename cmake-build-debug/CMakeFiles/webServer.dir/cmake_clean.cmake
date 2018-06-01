@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/webServer.dir/Tests/test_LogFile.cpp.o"
   "CMakeFiles/webServer.dir/server/base/Logging.cpp.o"
   "CMakeFiles/webServer.dir/server/base/LogStream.cpp.o"
+  "CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o"
+  "CMakeFiles/webServer.dir/Tests/test_LogStream.cpp.o"
   "webServer.pdb"
   "webServer"
 )

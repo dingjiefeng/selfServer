@@ -348,6 +348,9 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/Tests/test_LogFile.cpp">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/Tests/test_LogStream.cpp">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/lib/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -361,6 +364,12 @@
 			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/main.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/AsyncLogging.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/base/AsyncLogging.h">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/base/CountDownLatch.cpp">
