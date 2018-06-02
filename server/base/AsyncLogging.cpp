@@ -85,12 +85,15 @@ void AsyncLogging::threadFunc()
         assert(buffersToWrite.empty());
         {
             std::unique_lock<std::mutex> lock(m_mutex);
+            //如果当前buffer为空,等待填充或者等待LogFile刷出去
             if (m_buffers.empty())//unusual usage!
             {
+                //等待cond notify或者达到等待时间
                 m_cond.wait_for(lock, std::chrono::seconds(m_flushInterval));
             }
             m_buffers.emplace_back(m_currentBuffer.release());
             m_currentBuffer = std::move(newBuffer1);
+            //转移buffers到BTW,准备写入文件
             buffersToWrite.swap(m_buffers);
             if (!m_nextBuffer)
             {
@@ -102,15 +105,11 @@ void AsyncLogging::threadFunc()
 
         if (buffersToWrite.size() > 25)
         {
-//            char buf[256];
-//            snprintf(buf, sizeof buf, "Dropped log messages at %s, %zd larger buffers\n",
-//                     Timestamp::now().toFormattedString().c_str(),
-//                     buffersToWrite.size()-2);
-//            fputs(buf, stderr);
-//            output.append(buf, static_cast<int>(strlen(buf)));
+            //drop
             buffersToWrite.erase(buffersToWrite.begin()+2, buffersToWrite.end());
         }
 
+        //将buffer中的数据写入文件
         for (auto &bufferToWrite : buffersToWrite)
         {
             output.append(bufferToWrite->data(),
@@ -119,6 +118,8 @@ void AsyncLogging::threadFunc()
 
         if (buffersToWrite.size() > 2)
         {
+            //drop non-zero buffers,avoid trashing
+            //之所以保留2个给newBuffer,尽量减少内存申请,
             buffersToWrite.resize(2);
         }
 
