@@ -11,12 +11,15 @@
 - ThreadPool.h : C++ 11 实现的线程池
 - CountDownLatch.h/cpp : 倒计时门栓
 - FileUtil.h/cpp : Log文件使用到的基本单元
-
+- LogFile.h/cpp : 负责roll file
+- LogStream.h/cpp : 管理buffer
+- AsyncLogging.h/cpp : 缓冲区的前后端调度
+- Logging.h/cpp : Logger类
 
 ## 目录结构
 ```
 .
-|
+│
 ├── CMakeLists.txt
 ├── lib
 │   └── googletest
@@ -29,21 +32,31 @@
 ├── push2master.sh
 ├── README.md
 ├── server
-│   └── base
-│       ├── base.h
-│       ├── CountDownLatch.cpp
-│       ├── CountDownLatch.h
-│       ├── FileUtil.cpp
-│       ├── FileUtil.h
-│       ├── LogFile.cpp
-│       ├── LogFile.h
-│       └── ThreadPool.h
+│   ├── base
+│   │   ├── AsyncLogging.cpp
+│   │   ├── AsyncLogging.h
+│   │   ├── base.h
+│   │   ├── CountDownLatch.cpp
+│   │   ├── CountDownLatch.h
+│   │   ├── FileUtil.cpp
+│   │   ├── FileUtil.h
+│   │   ├── LogFile.cpp
+│   │   ├── LogFile.h
+│   │   ├── Logging.cpp
+│   │   ├── Logging.h
+│   │   ├── LogStream.cpp
+│   │   ├── LogStream.h
+│   │   └── ThreadPool.h
+│   └── net
 ├── Tests
-│   ├── outputFile.txt
 │   ├── test_CountDownLatch.cpp
 │   ├── test.cpp
-│   └── test_FileUtil.cpp
+│   ├── test_FileUtil.cpp
+│   ├── test_LogFile.cpp
+│   └── test_LogStream.cpp
+├── TodoList
 └── 更新记录.md
+
 ```
 
 
