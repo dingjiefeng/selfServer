@@ -5,6 +5,7 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 #include "../server/base/AsyncLogging.h"
+#include "../server/base/Logging.h"
 
 using namespace selfServer;
 
@@ -12,7 +13,6 @@ class TestAsyncLog : public testing::Test
 {
 public:
     TestAsyncLog()
-            : mp_asynclog(new AsyncLogging("/home/jeff/Desktop/selfServer/Tests/AsyncLogDemo"))
     {}
 
     void SetUp() override {
@@ -48,6 +48,23 @@ TEST_F(TestAsyncLog, condition_variable_wait_for){
     ASSERT_EQ(str, time1<time2 ? condNotify : timeout);
 }
 
-TEST_F(TestAsyncLog, asynclog){
+TEST_F(TestAsyncLog, asynclog)
+{
+    size_t kOneMB = 1024*1024;
 
+    mp_asynclog.reset(new AsyncLogging(Logger::g_logFileName, kOneMB));
+
+    printf("pid = %d\n", getpid());
+
+    mp_asynclog->start();
+
+    std::string text("hello 123456789\n");
+    const int kBatch = 100000;
+    for (int i = 0; i < kBatch; ++i) {
+        mp_asynclog->append(text.c_str(), static_cast<int>(text.size()));
+        mp_asynclog->append(std::to_string(i).c_str(), static_cast<int>(std::to_string(i).size()));
+        mp_asynclog->append("/n", 1);
+        usleep(1);
+    }
+    usleep(1);
 }
