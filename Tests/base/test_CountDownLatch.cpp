@@ -5,8 +5,8 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 #include <iostream>
-#include "../server/base/CountDownLatch.h"
-#include "../server/base/ThreadPool.h"
+#include "../../server/base/CountDownLatch.h"
+#include "../../server/base/ThreadPool.h"
 
 using namespace selfServer;
 

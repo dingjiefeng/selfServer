@@ -4,7 +4,7 @@
 
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "../server/base/LogFile.h"
+#include "../../server/base/LogFile.h"
 
 using testing::Eq;
 using namespace selfServer;
@@ -24,7 +24,7 @@ public:
 };
 
 TEST_F(TestLogFile, demo){
-    std::string basename("/home/jeff/Desktop/selfServer/Tests/Log/LogFileDemo");
+    std::string basename("/home/jeff/Desktop/selfServer/Tests/_Log/LogFileDemo");
     mp_lf.reset(new LogFile(basename, 20*100));
     std::string txt("a demo file\n");
     mp_lf->append(txt.c_str(), static_cast<int>(txt.size()));
@@ -34,7 +34,7 @@ TEST_F(TestLogFile, demo){
 }
 
 TEST_F(TestLogFile, run){
-    std::string basename("/home/jeff/Desktop/selfServer/Tests/Log/LogFileDemo");
+    std::string basename("/home/jeff/Desktop/selfServer/Tests/_Log/LogFileDemo");
     mp_lf.reset(new LogFile(basename, 20*100));
     std::string line("1234567890 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ ");
     for (int i = 0; i < 1000; ++i)

@@ -4,7 +4,7 @@
 
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "../server/base/LogStream.h"
+#include "../../server/base/LogStream.h"
 #include <thread>
 
 using namespace selfServer;

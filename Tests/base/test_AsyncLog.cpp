@@ -4,8 +4,8 @@
 
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "../server/base/AsyncLogging.h"
-#include "../server/base/Logging.h"
+#include "../../server/base/AsyncLogging.h"
+#include "../../server/base/Logging.h"
 
 using namespace selfServer;
 
