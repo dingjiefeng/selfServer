@@ -10,6 +10,7 @@
 #include "base.h"
 #include <string>
 #include <functional>
+#include <algorithm>
 
 /**
  * @brief 本文件中主要定义了FixBuffer和LogStream,LogStream中含有一个buffer,
@@ -83,6 +84,19 @@ namespace selfServer
         self&operator<<(unsigned long);
         self&operator<<(unsigned long long);
 
+        self&operator<<(const void* p)
+        {
+            auto v = reinterpret_cast<uintptr_t>(p);
+            if (m_buffer.avail() >= kMaxNumericSize)
+            {
+                char* buf = m_buffer.current();
+                buf[0] = '0';
+                buf[1] = 'x';
+                size_t len = convertHex(buf+2, v);
+                m_buffer.add(len+2);
+            }
+            return *this;
+        }
 
         self&operator<<(double);
 
@@ -127,6 +141,25 @@ namespace selfServer
         void resetBuffer() { m_buffer.reset();}
 
     private:
+
+        size_t convertHex(char buf[], uintptr_t value)
+        {
+            const char digitsHex[] = "0123456789ABCDEF";
+            uintptr_t i = value;
+            char* p = buf;
+
+            do
+            {
+                int lsd = static_cast<int>(i % 16);
+                i /= 16;
+                *p++ = digitsHex[lsd];
+            } while (i != 0);
+
+            *p = '\0';
+            std::reverse(buf, p);
+
+            return p - buf;
+        }
 
         template <typename T>
         void formatInteger(T);

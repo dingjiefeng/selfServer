@@ -49,7 +49,8 @@ namespace selfServer
 
 
 
-#define LOG selfServer::Logger(__FILE__, __LINE__).stream()
+#define LOG_INFO (selfServer::Logger(__FILE__, __LINE__).stream() << "INFO ")
+#define LOG_FATAL (selfServer::Logger(__FILE__, __LINE__).stream() << "FATAL ")
 
 }
 #endif //WEBSERVER_LOGGING_H

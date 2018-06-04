@@ -11,7 +11,7 @@ using namespace selfServer;
 static pthread_once_t once_control_ = PTHREAD_ONCE_INIT;
 static std::unique_ptr<AsyncLogging> gp_AsyncLogger;
 
-std::string Logger::g_logFileName = "/home/jeff/Desktop/selfServer/Tests/Log/Logging";
+std::string Logger::g_logFileName = "/home/jeff/Desktop/selfServer/Tests/_Log/Logging";
 namespace selfServer
 {
 
