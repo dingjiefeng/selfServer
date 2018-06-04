@@ -1,3 +1,2 @@
-todo : 1. 写完AsyncLogging.h/cpp 并且可以测试log模块的应用
-TODO: 2. 开始写net部分,可以从epoll开始写起,也可以单个文件开始写起
-TODO: 3. 添加注释
+todo : eventloop 编写
+todo : 搞清楚 reactor 模式
