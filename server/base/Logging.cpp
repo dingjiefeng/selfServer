@@ -7,20 +7,22 @@
 #include "AsyncLogging.h"
 
 using namespace selfServer;
+
+static pthread_once_t once_control_ = PTHREAD_ONCE_INIT;
 static std::unique_ptr<AsyncLogging> gp_AsyncLogger;
 
-std::string Logger::g_logFileName = "selfServer.log";
+std::string Logger::g_logFileName = "/home/jeff/Desktop/selfServer/Tests/Log/Logging";
 namespace selfServer
 {
 
     void once_init()
     {
-//        std::string str(Logger::getLogFileName());
-        gp_AsyncLogger.reset(new AsyncLogging(Logger::g_logFileName));
+        gp_AsyncLogger.reset(new AsyncLogging(Logger::g_logFileName, 10*1024*1024));
         gp_AsyncLogger->start();
     }
     void output(const char* msg, int len)
     {
+        pthread_once(&once_control_, once_init);
         gp_AsyncLogger->append(msg, len);
     }
 
