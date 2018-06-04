@@ -78,6 +78,8 @@ class ThreadsGuard : public NonCopyable
         {
             stop();
             cond_.notify_all();
+            for (auto & t : threads_)
+                t.join();
         }
 
         void stop()
