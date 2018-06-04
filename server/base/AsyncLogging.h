@@ -20,7 +20,7 @@ namespace selfServer
     {
     public:
         explicit AsyncLogging(const std::string& basename,
-                     off_t rollSize = 1024,
+                     off_t rollSize,
                      int flushInterval = 3);
 
         ~AsyncLogging() override
