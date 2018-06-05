@@ -36,6 +36,8 @@ namespace selfServer
 
             void quit();
 
+            void wakeup();
+
             void assertInLoopThread()
             {
                 if (!isInLoopThread())

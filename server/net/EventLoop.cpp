@@ -52,3 +52,10 @@ void EventLoop::abortNotInLoopThread()
     LOG_FATAL << "EventLoop::abortNotInLoopThread - EventLoop was created in threadID = "
                  << m_threadId << ", current threadID = " << syscall(SYS_gettid);
 }
+
+void EventLoop::quit()
+{
+    m_quit = true;
+
+}
+
