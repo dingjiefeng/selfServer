@@ -16,6 +16,12 @@
 - AsyncLogging.h/cpp : 缓冲区的前后端调度
 - Logging.h/cpp : Logger类
 
+## 网络组件
+- Channel.h/cpp
+- EventLoop.h/cpp
+- Poller.h/cpp
+
+
 ## 目录结构
 ```
 .
@@ -48,12 +54,27 @@
 │   │   ├── LogStream.h
 │   │   └── ThreadPool.h
 │   └── net
+│       ├── Channel.cpp
+│       ├── Channel.h
+│       ├── EventLoop.cpp
+│       ├── EventLoop.h
+│       ├── Poller.cpp
+│       └── Poller.h
 ├── Tests
-│   ├── test_CountDownLatch.cpp
-│   ├── test.cpp
-│   ├── test_FileUtil.cpp
-│   ├── test_LogFile.cpp
-│   └── test_LogStream.cpp
+│   ├── base
+│   │   ├── test_AsyncLog.cpp
+│   │   ├── test_CountDownLatch.cpp
+│   │   ├── test.cpp
+│   │   ├── test_FileUtil.cpp
+│   │   ├── test_LogFile.cpp
+│   │   ├── test_Logging.cpp
+│   │   ├── test_LogStream.cpp
+│   │   └── test_ThreadPool.cpp
+│   ├── _Log
+│   │   ├── clear.sh
+│   │   └── Logging-20180605-090310--252713216.log
+│   └── net
+│       └── test_EventLoop.cpp
 ├── TodoList
 └── 更新记录.md
 
