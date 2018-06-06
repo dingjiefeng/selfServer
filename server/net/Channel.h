@@ -26,14 +26,15 @@ namespace selfServer
 
             void handleEvent();
 
-            void setReadCallback(const EventCallback& cb)
-            { m_readCallback = cb;}
+            void setReadCallback(
+                    std::_Bind_helper<0, void (selfServer::net::EventLoop::*)(), selfServer::net::EventLoop *>::type cb)
+            { m_readCallback = std::move(cb);}
 
-            void setWriteCallback(const EventCallback& cb)
-            { m_writeCallback = cb;}
+            void setWriteCallback(EventCallback cb)
+            { m_writeCallback = std::move(cb);}
 
-            void setErrorCallback(const EventCallback& cb)
-            { m_errorCallback = cb;}
+            void setErrorCallback(EventCallback cb)
+            { m_errorCallback = std::move(cb);}
 
             int fd() const { return m_fd;}
 
@@ -50,6 +51,9 @@ namespace selfServer
             void set_index(const int idx) { m_index = idx;}
 
             EventLoop* ownerLoop() { return m_loop;}
+
+            std::string reventsToString() const;
+            std::string eventsToString() const;
 
         private:
 

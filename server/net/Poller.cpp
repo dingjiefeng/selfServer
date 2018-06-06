@@ -10,6 +10,14 @@
 using namespace selfServer;
 using namespace selfServer::net;
 
+static_assert(EPOLLIN == POLLIN,        "epoll uses same flag values as poll");
+static_assert(EPOLLPRI == POLLPRI,      "epoll uses same flag values as poll");
+static_assert(EPOLLOUT == POLLOUT,      "epoll uses same flag values as poll");
+static_assert(EPOLLRDHUP == POLLRDHUP,  "epoll uses same flag values as poll");
+static_assert(EPOLLERR == POLLERR,      "epoll uses same flag values as poll");
+static_assert(EPOLLHUP == POLLHUP,      "epoll uses same flag values as poll");
+
+//poller
 Poller::Poller(EventLoop *loop)
     : m_ownerLoop(loop)
 {
@@ -18,65 +26,169 @@ Poller::Poller(EventLoop *loop)
 
 Poller::~Poller() = default;
 
-void Poller::fillActiveChannels(int numEvents, Poller::ChannelList *activeChannels) const
+bool Poller::hasChannel(selfServer::net::Channel *channel) const
 {
-    for (auto pfd = m_PollFds.cbegin();
-            pfd != m_PollFds.cend() && numEvents > 0; ++pfd)
+    assertInLoopThread();
+    auto it = m_Channels.find(channel->fd());
+    return it != m_Channels.end() && it->second == channel;
+}
+
+Poller *Poller::newDefaultPoller(EventLoop *loop)
+{
+    return new EPollPoller(loop);
+}
+
+//epoll
+EPollPoller::EPollPoller(EventLoop *loop)
+        : Poller(loop),
+          m_events(kInitEventListSize),
+          m_epollFd(::epoll_create1(EPOLL_CLOEXEC))
+{
+    if (m_epollFd < 0)
     {
-        if (pfd->revents > 0)
-        {
-            --numEvents;
-            auto ch = m_Channels.find(pfd->fd);
-            assert(ch != m_Channels.end());
-            Channel* p_channel = ch->second;
-            assert(p_channel->fd() == pfd->fd);
-            p_channel->set_revents(pfd->revents);
-            activeChannels->emplace_back(p_channel);
-        }
+        LOG_FATAL << "EPollPoller::EPollPoller";
     }
 }
 
-steady_clock::time_point Poller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
+EPollPoller::~EPollPoller()
 {
-    int numEvents = ::poll(&*m_PollFds.begin(), m_PollFds.size(), timeOutMs);
+    ::close(m_epollFd);
+}
+
+time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
+{
+    LOG_INFO << "fd total count " << m_Channels.size();
+    int numEvents = ::epoll_wait(m_epollFd,
+                                 &*m_events.begin(),
+                                 static_cast<int>(m_events.size()),
+                                 timeOutMs);
+    int savedErrno = errno;
     steady_clock::time_point now(steady_clock::now());
-    if (numEvents > 0) {
-        LOG_INFO << numEvents << " events happend";
+    if (numEvents > 0)
+    {
+        LOG_INFO << numEvents << " events happened";
         fillActiveChannels(numEvents, activeChannels);
-    } else if (numEvents == 0) {
+        if ( numEvents == m_events.size())
+        {
+            m_events.resize(m_events.size()*2);
+        }
+    } else if (numEvents == 0)
+    {
         LOG_INFO << "nothing happened";
-    } else {
-        LOG_INFO << "Poller::poll()";
+    } else
+    {
+        //error
+        if (savedErrno != EINTR)
+        {
+            errno = savedErrno;
+            LOG_INFO << "EPollPoller::Poll() Error";
+        }
     }
     return now;
 }
 
-void Poller::updateChannel(Channel *channel)
+/**
+ * EPOLL_CTL_ADD : 注册新的fd到epfd中
+ * EPOLL_CTL_MOD : 修改已注册的fd的监听事件
+ * EPOLL_CTL_DEL : 从epfd中删除一个fd
+ * @param channel
+ */
+void EPollPoller::updateChannel(Channel *channel)
 {
-    assertInLoopThread();
-    LOG_INFO << "fd= " << channel->fd() << "events = " << channel->events();
-    if (channel->index() < 0) {
-        assert(m_Channels.find(channel->fd()) == m_Channels.end());
-        struct pollfd pfd;
-        pfd.fd = channel->fd();
-        pfd.events = static_cast<short>(channel->events());
-        pfd.revents = 0;
-        m_PollFds.emplace_back(pfd);
-        int idx = static_cast<int>(m_PollFds.size() - 1);
-        channel->set_index(idx);
-        m_Channels[pfd.fd] = channel;
-    } else {
-        //update existing one
-        assert(m_Channels.find(channel->fd()) != m_Channels.end());
-        assert(m_Channels[channel->fd()] == channel);
-        int idx = channel->index();
-        assert(0<=idx && idx < static_cast<int>(m_PollFds.size()));
-        struct pollfd& pfd = m_PollFds[idx];
-        assert(pfd.fd == channel->fd() || pfd.fd == -1);
-        pfd.events = static_cast<short>(channel->events());
-        pfd.revents = 0;
-        if (channel->isNoneEvent()) {
-            pfd.fd = -1;
+    Poller::assertInLoopThread();
+    const int index = channel->index();
+    LOG_INFO << "fd = " << channel->fd()
+             << " events = " << channel->events()
+             << " index = " << index;
+    if (index == kNew || index == kDeleted)
+    {
+        int fd = channel->fd();
+        if (index == kNew)
+        {
+            assert(m_Channels.find(fd) == m_Channels.end());
+            m_Channels[fd] = channel;
+        } else
+        {
+            assert(m_Channels.find(fd) != m_Channels.end());
+            assert(m_Channels[fd] == channel);
+        }
+        channel->set_index(kAdded);
+        update(EPOLL_CTL_ADD, channel);
+    } else
+    {
+        int fd = channel->fd();
+        assert(m_Channels.find(fd) != m_Channels.end());
+        assert(m_Channels[fd] == channel);
+        assert(index == kAdded);
+        if (channel->isNoneEvent())
+        {
+            update(EPOLL_CTL_DEL, channel);
+            channel->set_index(kDeleted);
+        } else
+        {
+            update(EPOLL_CTL_MOD, channel);
         }
     }
+}
+
+void EPollPoller::removeChannel(Channel *channel)
+{
+    Poller::assertInLoopThread();
+    int fd = channel->fd();
+    LOG_INFO << "fd = " << fd;
+    assert(m_Channels.find(fd) != m_Channels.end());
+    assert(m_Channels[fd] == channel);
+    assert(channel->isNoneEvent());
+    int index = channel->index();
+    assert(index == kAdded || index == kDeleted);
+    size_t n = m_Channels.erase(fd);
+    assert(n == 1);
+
+    if (index == kAdded)
+    {
+        update(EPOLL_CTL_DEL, channel);
+    }
+    channel->set_index(kNew);
+}
+
+std::string EPollPoller::operationToString(int op)
+{
+    switch (op)
+    {
+        case EPOLL_CTL_ADD:
+            return "ADD";
+        case EPOLL_CTL_DEL:
+            return "DEL";
+        case EPOLL_CTL_MOD:
+            return "MOD";
+        default:
+            LOG_FATAL << "Unknown Operation";
+            assert(false);
+            return "Unknown Operation";
+    }
+}
+
+void EPollPoller::fillActiveChannels(int numEvents,
+                                     Poller::ChannelList *activeChannels) const
+{
+    assert(numEvents <= m_events.size());
+    for (int i = 0; i < numEvents; ++i)
+    {
+        auto channel = static_cast<Channel *>(m_events[i].data.ptr);
+        channel->set_revents(m_events[i].events);
+        activeChannels->emplace_back(channel);
+    }
+}
+
+void EPollPoller::update(int operation, Channel *channel)
+{
+    struct epoll_event event;
+    bzero(&event, sizeof event);
+    event.events = channel->events();
+    event.data.ptr = channel;
+    int fd = channel->fd();
+    LOG_INFO << "epoll_ctl op = " << operationToString(operation)
+             << " fd = " << fd
+                         << " event = { " << channel->
+
 }

@@ -60,4 +60,16 @@ void Channel::update()
 
 }
 
+std::string Channel::reventsToString() const
+{
+
+}
+
+std::string Channel::eventsToString() const
+{
+
+}
+
+
+
 

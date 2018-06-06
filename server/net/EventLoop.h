@@ -11,14 +11,19 @@
 #include <zconf.h>
 #include <mutex>
 #include <vector>
+#include <memory>
+#include "Channel.h"
 #include "../base/base.h"
 
-//todo : wait for updating in the future when adding other files
+using namespace std::chrono;
 
 namespace selfServer
 {
     namespace net
     {
+        class Channel;
+        class Poller;
+
         /**
          *@brief one loop one thread,
          * check if there is other thread in the same thread,
@@ -36,7 +41,23 @@ namespace selfServer
 
             void quit();
 
+            steady_clock::time_point pollReturnTime() const { return m_pollReturnTime;}
+
+            int64_t iteration() const { return m_iteration;}
+
+            void runInLoop(Functor cb);
+
+            void queueInLoop(Functor cb);
+
+            size_t queueSize() const;
+
+            //todo : timers
+
+
             void wakeup();
+            void updateChannel(Channel* channel);
+            void removeChannel(Channel* channel);
+            bool hasChannel(Channel* channel);
 
             void assertInLoopThread()
             {
@@ -47,10 +68,28 @@ namespace selfServer
             }
             bool isInLoopThread() const { return m_threadId == syscall(SYS_gettid);}
 
+            bool eventHandling() const { return m_eventHandling;}
+
+            void setContext(const selfServer::any& context)
+            { m_context = context; }
+
+            const selfServer::any& getContext() const
+            { return m_context; }
+
+            selfServer::any* getMutableContext()
+            { return &m_context; }
+
             static EventLoop* getEventLoopOfCurrentThread();
         private:
 
             void abortNotInLoopThread();
+            void handleRead();
+            void doPendingFunctors();
+
+            void printActiveChannels() const;
+
+            typedef std::vector<Channel*> ChannelList;
+
 
             bool m_looping;
             std::atomic<bool> m_quit;
@@ -59,7 +98,17 @@ namespace selfServer
             int64_t m_iteration;
 
             const pid_t m_threadId;
-            std::chrono::system_clock::time_point m_pollReturnTime;
+            steady_clock::time_point m_pollReturnTime;
+
+            std::unique_ptr<Poller> m_poller;
+            //todo timerqueue
+            int m_wakeupFd;
+
+            std::unique_ptr<Channel> m_wakeupChannel;
+            selfServer::any m_context;
+
+            ChannelList m_activeChannels;
+            Channel* m_currentActiveChannel;
 
             mutable std::mutex m_mutex;
             std::vector<Functor> m_pendingFunctors; // Guarded by m_mutex
