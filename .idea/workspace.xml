@@ -9,24 +9,28 @@
       <config projectName="webServer" targetName="gtest_main" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57afabd1-fcb9-4ffd-83da-f854abe25cde" name="Default" comment="完成logging撰写">
+    <list default="true" id="57afabd1-fcb9-4ffd-83da-f854abe25cde" name="Default" comment="complete the part of log!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/Tests/test.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/Tests/test_CountDownLatch.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/webServer.dir/server/base/CountDownLatch.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/webServer" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/webServer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/webServer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/webServer.cbp" afterDir="false" />
@@ -43,81 +47,65 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.674934">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Logging.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/base/Logging.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="305">
-                  <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#38#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AsyncLogging.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/base/AsyncLogging.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1232">
-                  <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#38#56#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LogStream.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#99#116#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Logging.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/server/base/Logging.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#96#114#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AsyncLogging.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/base/AsyncLogging.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
-                  <caret line="74" selection-start-line="74" selection-end-line="74" />
-                  <folding>
-                    <element signature="e#105#122#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Channel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/net/Channel.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#95#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventLoop.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/net/EventLoop.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+              <folding>
+                <element signature="e#98#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventLoop.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/net/EventLoop.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <element signature="e#37#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>copy</find>
+      <find>BOOST_CHECK_EQUAL</find>
     </findStrings>
+    <replaceStrings>
+      <replace>ASSERT_EQ</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -130,31 +118,45 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/base/ThreadPool.h" />
         <option value="$PROJECT_DIR$/server/base/CountDownLatch.h" />
         <option value="$PROJECT_DIR$/server/base/CountDownLatch.cpp" />
         <option value="$PROJECT_DIR$/Tests/test_CountDownLatch.cpp" />
         <option value="$PROJECT_DIR$/server/base/FileUtil.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Tests/outputFile.txt" />
         <option value="$PROJECT_DIR$/Tests/test_FileUtil.cpp" />
-        <option value="$PROJECT_DIR$/server/base/base.h" />
         <option value="$PROJECT_DIR$/problems.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Tests/FileLogDemo.txt" />
         <option value="$PROJECT_DIR$/server/base/LogFile.h" />
         <option value="$PROJECT_DIR$/server/base/FileUtil.h" />
         <option value="$PROJECT_DIR$/server/base/LogFile.cpp" />
+        <option value="$PROJECT_DIR$/server/base/LogStream.cpp" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/server/base/AsyncLogging.cpp" />
+        <option value="$PROJECT_DIR$/Tests/test_AsyncLogging.cpp" />
+        <option value="$PROJECT_DIR$/Tests/test_LogStream.cpp" />
+        <option value="$PROJECT_DIR$/server/base/AsyncLogging.h" />
+        <option value="$PROJECT_DIR$/Tests/test_LogFile.cpp" />
+        <option value="$PROJECT_DIR$/Tests/test_AsyncLog.cpp" />
+        <option value="$PROJECT_DIR$/server/base/Logging.cpp" />
+        <option value="$PROJECT_DIR$/server/base/ThreadPool.h" />
         <option value="$PROJECT_DIR$/TodoList" />
         <option value="$PROJECT_DIR$/server/base/Logging.h" />
-        <option value="$PROJECT_DIR$/server/base/Logging.cpp" />
-        <option value="$PROJECT_DIR$/Tests/test_LogFile.cpp" />
-        <option value="$PROJECT_DIR$/Tests/test_LogStream.cpp" />
-        <option value="$PROJECT_DIR$/server/base/LogStream.cpp" />
-        <option value="$PROJECT_DIR$/server/base/AsyncLogging.h" />
-        <option value="$PROJECT_DIR$/server/base/AsyncLogging.cpp" />
-        <option value="$PROJECT_DIR$/更新记录.md" />
+        <option value="$PROJECT_DIR$/Tests/test_Logging.cpp" />
+        <option value="$PROJECT_DIR$/Tests/base/test_FileUtil.cpp" />
         <option value="$PROJECT_DIR$/server/base/LogStream.h" />
+        <option value="$PROJECT_DIR$/Tests/base/test_Logging.cpp" />
+        <option value="$PROJECT_DIR$/Tests/net/test_EventLoop.cpp" />
+        <option value="$PROJECT_DIR$/更新记录.md" />
+        <option value="$PROJECT_DIR$/server/net/Poller.h" />
+        <option value="$PROJECT_DIR$/server/net/Channel.cpp" />
+        <option value="$PROJECT_DIR$/server/net/Poller.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/server/base/base.h" />
+        <option value="$PROJECT_DIR$/server/net/EventLoop.h" />
+        <option value="$PROJECT_DIR$/server/net/Channel.h" />
+        <option value="$PROJECT_DIR$/server/net/EventLoop.cpp" />
+        <option value="$PROJECT_DIR$/Tests/base/test_ThreadPool.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -202,7 +204,31 @@
             <path>
               <item name="webServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfServer" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfServer" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="_Log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfServer" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfServer" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -212,11 +238,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="LOG&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="ValgrindSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tests/base" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -230,12 +262,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.TestLogStream">
-    <configuration name="All in test_LogStream.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_PATTERN="TestLogStream.*:TestLogStream/*.*:*/TestLogStream.*/*:*/TestLogStream/*.*" TEST_MODE="PATTERN" />
-    <configuration name="FileUtilTest.example" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="FileUtilTest" TEST_METHOD="example" TEST_MODE="SUITE_TEST" />
-    <configuration name="TestLogFile.demo" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogFile" TEST_METHOD="demo" TEST_MODE="SUITE_TEST" />
-    <configuration name="TestLogStream" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogStream" TEST_MODE="SUITE_TEST" />
-    <configuration name="TestLogStream.fixbuffer" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogStream" TEST_METHOD="fixbuffer" TEST_MODE="SUITE_TEST" />
+  <component name="RunManager" selected="Google Test.TestEventLoop.isRunInLoop">
+    <configuration name="All in test_Logging.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_PATTERN="TestLogging.*:TestLogging/*.*:*/TestLogging.*/*:*/TestLogging/*.*" TEST_MODE="PATTERN" />
+    <configuration name="TestEventLoop.isRunInLoop" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestEventLoop" TEST_METHOD="isRunInLoop" TEST_MODE="SUITE_TEST" />
+    <configuration name="TestLogFile" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogFile" TEST_MODE="SUITE_TEST" />
+    <configuration name="TestLogging.bench" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogging" TEST_METHOD="bench" TEST_MODE="SUITE_TEST" />
+    <configuration name="TestLogging.demo" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="webServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" TEST_CLASS="TestLogging" TEST_METHOD="demo" TEST_MODE="SUITE_TEST" />
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="webServer" RUN_TARGET_NAME="webServer" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="gmock" CONFIG_NAME="Debug" />
     <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="webServer" TARGET_NAME="gmock_main" CONFIG_NAME="Debug" />
@@ -249,21 +281,24 @@
       <item itemvalue="Application.gmock_main" />
       <item itemvalue="Application.gtest" />
       <item itemvalue="Application.gtest_main" />
-      <item itemvalue="Google Test.FileUtilTest.example" />
-      <item itemvalue="Google Test.TestLogFile.demo" />
-      <item itemvalue="Google Test.TestLogStream.fixbuffer" />
-      <item itemvalue="Google Test.TestLogStream" />
-      <item itemvalue="Google Test.All in test_LogStream.cpp" />
+      <item itemvalue="Google Test.TestLogFile" />
+      <item itemvalue="Google Test.TestLogging.demo" />
+      <item itemvalue="Google Test.TestLogging.bench" />
+      <item itemvalue="Google Test.All in test_Logging.cpp" />
+      <item itemvalue="Google Test.TestEventLoop.isRunInLoop" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Google Test.TestLogStream" />
-        <item itemvalue="Google Test.All in test_LogStream.cpp" />
-        <item itemvalue="Google Test.TestLogStream.fixbuffer" />
-        <item itemvalue="Google Test.TestLogFile.demo" />
-        <item itemvalue="Google Test.FileUtilTest.example" />
+        <item itemvalue="Google Test.TestEventLoop.isRunInLoop" />
+        <item itemvalue="Google Test.TestLogging.bench" />
+        <item itemvalue="Google Test.All in test_Logging.cpp" />
+        <item itemvalue="Google Test.TestLogging.demo" />
+        <item itemvalue="Google Test.TestLogFile" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -282,91 +317,13 @@
       <workItem from="1527663665133" duration="9809000" />
       <workItem from="1527749846358" duration="19615000" />
       <workItem from="1527778292983" duration="557000" />
-      <workItem from="1527836204135" duration="21645000" />
-    </task>
-    <task id="LOCAL-00001" summary="add base.h(class NonCopyable)">
-      <created>1527602369289</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602369289</updated>
-    </task>
-    <task id="LOCAL-00002" summary="daily modify">
-      <created>1527602480734</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602480734</updated>
-    </task>
-    <task id="LOCAL-00003" summary="include base.h(class NonCopyable)">
-      <created>1527602517709</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602517709</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add FileUtil.h/cpp and test file of FileUtil">
-      <created>1527602608929</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602608929</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add LogFile.h/cpp">
-      <created>1527602782815</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602782815</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add daily build">
-      <created>1527602824332</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1527602824332</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add problem">
-      <created>1527605552236</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605552236</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update readme file">
-      <created>1527605567078</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605567078</updated>
-    </task>
-    <task id="LOCAL-00009" summary="05.28更新">
-      <created>1527605585000</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605585000</updated>
-    </task>
-    <task id="LOCAL-00010" summary="change project file">
-      <created>1527605607510</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605607510</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update readme file">
-      <created>1527605868012</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605868012</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1527605899416</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1527605899416</updated>
+      <workItem from="1527836204135" duration="21751000" />
+      <workItem from="1527907065396" duration="12610000" />
+      <workItem from="1528075201111" duration="30188000" />
+      <workItem from="1528186766911" duration="3508000" />
+      <workItem from="1528199113367" duration="10583000" />
+      <workItem from="1528246681099" duration="18989000" />
+      <workItem from="1528288778637" duration="6860000" />
     </task>
     <task id="LOCAL-00013" summary="update">
       <created>1527606020897</created>
@@ -536,43 +493,218 @@
       <option name="project" value="LOCAL" />
       <updated>1527867264878</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update">
+      <created>1527867337534</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1527867337534</updated>
+    </task>
+    <task id="LOCAL-00038" summary="更新README.md">
+      <created>1527907822622</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1527907822623</updated>
+    </task>
+    <task id="LOCAL-00039" summary="完成异步日志前后端调度的注释">
+      <created>1527913820056</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1527913820056</updated>
+    </task>
+    <task id="LOCAL-00040" summary="添加异步日志的单元测试">
+      <created>1527914032605</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1527914032605</updated>
+    </task>
+    <task id="LOCAL-00041" summary="完善LogFile与LogStream的单元测试">
+      <created>1528114097051</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114097052</updated>
+    </task>
+    <task id="LOCAL-00042" summary="完善异步日志的单元测试">
+      <created>1528114140498</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114140498</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Logging文件的单元测试">
+      <created>1528114188110</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114188110</updated>
+    </task>
+    <task id="LOCAL-00044" summary="添加MyTime类用来计时">
+      <created>1528114221368</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114221368</updated>
+    </task>
+    <task id="LOCAL-00045" summary="小修改,todo:join存在一些问题">
+      <created>1528114262344</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114262344</updated>
+    </task>
+    <task id="LOCAL-00046" summary="异步日志的默认rollSize作了修改">
+      <created>1528114339672</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114339672</updated>
+    </task>
+    <task id="LOCAL-00047" summary="complete the part of log!">
+      <created>1528114520389</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114520389</updated>
+    </task>
+    <task id="LOCAL-00048" summary="change path">
+      <created>1528124835716</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1528124835716</updated>
+    </task>
+    <task id="LOCAL-00049" summary="daily update">
+      <created>1528124870725</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1528124870725</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add the support for logging pointer">
+      <created>1528124912157</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1528124912176</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add EventLoop.cpp/h file">
+      <created>1528124950441</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1528124950445</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add Channel">
+      <created>1528211075498</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1528211075508</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add EventLoop">
+      <created>1528211149158</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1528211149158</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add Poller">
+      <created>1528211260877</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1528211260879</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add unit test of EventLoop">
+      <created>1528211342132</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1528211342134</updated>
+    </task>
+    <task id="LOCAL-00056" summary="daily update">
+      <created>1528211371759</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1528211371766</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add class any like boost::any">
+      <created>1528294290365</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1528294290381</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add the unit test of ThreadPool">
+      <created>1528295737253</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1528295737254</updated>
+    </task>
+    <task id="LOCAL-00059" summary="移除tpdemo()">
+      <created>1528295812609</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1528295812615</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add file in cmakelist">
+      <created>1528295870835</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1528295870847</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add basic part of reactor pattern, to be continued">
+      <created>1528296100997</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1528296101042</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestLogFile_demo - 2018.06.01 at 17h 50m 10s.xml">
-      <configuration name="TestLogFile.demo" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestLogging_bench - 2018.06.04 at 19h 53m 28s.xml">
+      <configuration name="TestLogging.bench" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogFile_demo - 2018.06.01 at 18h 04m 46s.xml">
-      <configuration name="TestLogFile.demo" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestLogging_bench - 2018.06.04 at 21h 50m 40s.xml">
+      <configuration name="TestLogging.bench" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogFile_demo - 2018.06.01 at 18h 14m 54s.xml">
-      <configuration name="TestLogFile.demo" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestLogging_bench - 2018.06.04 at 22h 40m 37s.xml">
+      <configuration name="TestLogging.bench" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogFile_demo - 2018.06.01 at 18h 15m 32s.xml">
-      <configuration name="TestLogFile.demo" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestLogging_bench - 2018.06.04 at 22h 59m 33s.xml">
+      <configuration name="TestLogging.bench" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogFile_demo - 2018.06.01 at 18h 17m 36s.xml">
-      <configuration name="TestLogFile.demo" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestLogging_bench - 2018.06.04 at 23h 03m 13s.xml">
+      <configuration name="TestLogging.bench" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogStream_fixbuffer - 2018.06.01 at 19h 12m 26s.xml">
-      <configuration name="TestLogStream.fixbuffer" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestEventLoop_isRunInLoop - 2018.06.05 at 16h 54m 55s.xml">
+      <configuration name="TestEventLoop.isRunInLoop" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogStream - 2018.06.01 at 19h 12m 36s.xml">
-      <configuration name="TestLogStream" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestEventLoop_isRunInLoop - 2018.06.05 at 16h 58m 00s.xml">
+      <configuration name="TestEventLoop.isRunInLoop" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogStream - 2018.06.01 at 19h 26m 20s.xml">
-      <configuration name="TestLogStream" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestEventLoop_isRunInLoop - 2018.06.05 at 17h 00m 07s.xml">
+      <configuration name="TestEventLoop.isRunInLoop" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogStream - 2018.06.01 at 19h 26m 46s.xml">
-      <configuration name="TestLogStream" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestEventLoop_isRunInLoop - 2018.06.05 at 17h 08m 58s.xml">
+      <configuration name="TestEventLoop.isRunInLoop" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestLogStream - 2018.06.01 at 19h 30m 24s.xml">
-      <configuration name="TestLogStream" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="TestEventLoop_isRunInLoop - 2018.06.05 at 17h 09m 14s.xml">
+      <configuration name="TestEventLoop.isRunInLoop" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75872000" />
+    <option name="totallyTimeSpent" value="158716000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,15 +718,13 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1082" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49892473" visible="true" weight="0.13562006" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49784946" visible="true" weight="0.3203166" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32795697" />
       <window_info anchor="bottom" id="CMake" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50026387" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49973616" visible="true" weight="0.52473116" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33010754" />
-      <window_info id="Structure" order="2" sideWeight="0.50107527" side_tool="true" weight="0.13614775" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013193" side_tool="true" weight="0.3268817" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49973616" visible="true" weight="0.42688173" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49815303" weight="0.32903227" />
+      <window_info id="Structure" order="2" sideWeight="0.50215054" side_tool="true" weight="0.102902375" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -602,8 +732,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49868074" weight="0.32473117" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,464 +781,264 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change project file" />
-    <MESSAGE value="update readme file" />
-    <MESSAGE value="add daily build" />
-    <MESSAGE value="add test of LogFile" />
-    <MESSAGE value="add LogFile.h/cpp" />
-    <MESSAGE value="add Logging.h/cpp" />
-    <MESSAGE value="add LogStream.h/cpp" />
-    <MESSAGE value="modify CMakeLists.txt" />
-    <MESSAGE value="daily update" />
-    <MESSAGE value="05.30更新" />
-    <MESSAGE value="add AsyncLogging.h/cpp" />
-    <MESSAGE value="添加注释,更改文件的命名方式" />
-    <MESSAGE value="改注释" />
-    <MESSAGE value="添加logger" />
-    <MESSAGE value="fix a bug" />
-    <MESSAGE value="update" />
-    <MESSAGE value="跟随LogFile作相应修改" />
-    <MESSAGE value="daily todo list" />
-    <MESSAGE value="更新" />
-    <MESSAGE value="unit test of LogStream.h/cpp" />
-    <MESSAGE value="更新CMakeList" />
-    <MESSAGE value="完成注释" />
-    <MESSAGE value="完成logging撰写" />
-    <MESSAGE value="完成logging大部分code" />
     <MESSAGE value="完成异步日志code和部分注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成异步日志code和部分注释" />
+    <MESSAGE value="update" />
+    <MESSAGE value="更新README.md" />
+    <MESSAGE value="完成异步日志前后端调度的注释" />
+    <MESSAGE value="添加异步日志的单元测试" />
+    <MESSAGE value="完善LogFile与LogStream的单元测试" />
+    <MESSAGE value="完善异步日志的单元测试" />
+    <MESSAGE value="Logging文件的单元测试" />
+    <MESSAGE value="添加MyTime类用来计时" />
+    <MESSAGE value="小修改,todo:join存在一些问题" />
+    <MESSAGE value="异步日志的默认rollSize作了修改" />
+    <MESSAGE value="complete the part of log!" />
+    <MESSAGE value="change path" />
+    <MESSAGE value="add the support for logging pointer" />
+    <MESSAGE value="add EventLoop.cpp/h file" />
+    <MESSAGE value="add Channel" />
+    <MESSAGE value="add EventLoop" />
+    <MESSAGE value="add Poller" />
+    <MESSAGE value="add unit test of EventLoop" />
+    <MESSAGE value="daily update" />
+    <MESSAGE value="add class any like boost::any" />
+    <MESSAGE value="add the unit test of ThreadPool" />
+    <MESSAGE value="移除tpdemo()" />
+    <MESSAGE value="add file in cmakelist" />
+    <MESSAGE value="add basic part of reactor pattern, to be continued" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic part of reactor pattern, to be continued" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/server/base/Logging.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="30" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeGoogleTestRunConfigurationType">
+        <watch expression="i" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>i==1000</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i==20000</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i==249999</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/base/Logging.cpp">
+    <entry file="file://$PROJECT_DIR$/lib/googletest/googletest/src/gtest.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#38#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="181">
+          <caret line="4666" selection-start-line="4666" selection-end-line="4666" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/googletest/googletest/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="2329" selection-start-line="2329" selection-end-line="2329" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Log/Logging-20180604-090943-1479821056.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/Log/Logging-20180604-090844-1585895168.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/Log/Logging-20180604-092315-2090182400.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/Log/Logging-20180604-092400-56780544.log" />
+    <entry file="file://$PROJECT_DIR$/server/base/ThreadPool.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_CountDownLatch.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_LogFile.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_LogStream.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="234" column="1" lean-forward="true" selection-start-line="234" selection-start-column="1" selection-end-line="234" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_FileUtil.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180604-150303-242411264.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_Logging.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/base/Logging.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <element signature="e#96#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/Logging.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/Logging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="179">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/base/LogStream.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TodoList">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
-          <folding>
-            <element signature="e#38#55#0" expanded="true" />
-            <element signature="e#172#182#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
+    <entry file="file://$PROJECT_DIR$/Tests/base/test.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180605-085759--594364672.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180605-085447-754349824.log" />
+    <entry file="file:///usr/include/c++/6/thread">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#99#116#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogFile.h">
+    <entry file="file:///usr/include/c++/6/bits/move.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-          <folding>
-            <element signature="e#95#112#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_LogFile.cpp">
+    <entry file="file:///usr/include/x86_64-linux-gnu/c++/6/bits/gthr-default.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="750" selection-start-line="750" selection-end-line="750" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/更新记录.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogFile.cpp">
+    <entry file="file:///usr/include/c++/6/bits/std_mutex.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogFile.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="43" />
-          <folding>
-            <element signature="e#95#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_LogFile.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_CountDownLatch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problems.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="12" selection-start-line="12" selection-end-line="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/更新记录.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="616">
-            <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_CountDownLatch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#155#1226#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_CountDownLatch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#155#1226#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/iostream">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/ThreadPool.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1430">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/outputFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/base.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="443">
-            <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problems.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="12" selection-start-line="12" selection-end-line="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_FileUtil.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="15" column="88" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="91" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/googletest/googletest/src/gtest.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53196">
-          <caret line="2418" selection-start-line="2418" selection-end-line="2418" />
+        <state relative-caret-position="190">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/include/c++/6/tuple">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="1264" selection-start-line="1264" selection-end-line="1264" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/FileLogDemo.txt" />
-    <entry file="file://$PROJECT_DIR$/lib/googletest/googlemock/include/gmock/gmock-matchers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/FileLogDemo.20180531-074307.-1309558976.log" />
-    <entry file="file://$PROJECT_DIR$/server/base/FileUtil.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogFile.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/FileUtil.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#97#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/CountDownLatch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/CountDownLatch.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/include/c++/6/bits/unique_ptr.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="329" column="15" selection-start-line="329" selection-start-column="12" selection-end-line="329" selection-end-column="15" />
+        <state relative-caret-position="190">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TodoList">
+    <entry file="file:///usr/include/c++/6/atomic">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="168">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_CountDownLatch.cpp">
+    <entry file="file:///usr/include/c++/6/bits/atomic_base.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="190">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="1390" column="13" lean-forward="true" selection-start-line="1390" selection-start-column="13" selection-end-line="1390" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180605-090004-1761548032.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180605-090855--374368512.log" />
+    <entry file="file://$PROJECT_DIR$/Tests/net/test_EventLoop.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
-            <element signature="e#38#62#0" expanded="true" />
+            <element signature="e#36#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/server/base/Logging.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="417">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#155#1226#0" />
+            <element signature="e#38#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_LogFile.cpp">
+    <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="301">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_LogStream.cpp">
+    <entry file="file://$PROJECT_DIR$/server/base/AsyncLogging.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#37#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogStream.cpp">
+    <entry file="file:///usr/include/poll.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#38#55#0" expanded="true" />
-            <element signature="e#539#551#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/Logging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#96#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogFile.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#95#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/AsyncLogging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#105#122#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/更新记录.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="484">
-            <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <first_editor relative-caret-position="726">
+            <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1114,32 +1046,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/AsyncLogging.cpp">
+    <entry file="file://$PROJECT_DIR$/Tests/_Log/Logging-20180605-090310--252713216.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="22">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/sys/poll.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        <state relative-caret-position="501">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/sys/epoll.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/net/Channel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
-            <element signature="e#38#56#0" expanded="true" />
+            <element signature="e#37#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/LogStream.h">
+    <entry file="file://$PROJECT_DIR$/server/net/Poller.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="264">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
-            <element signature="e#99#116#0" expanded="true" />
+            <element signature="e#93#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/base/Logging.cpp">
+    <entry file="file://$PROJECT_DIR$/server/base/base.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="506">
+          <caret line="111" column="24" lean-forward="true" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
           <folding>
-            <element signature="e#38#59#0" expanded="true" />
+            <element signature="e#126#436#1" />
+            <element signature="e#439#1814#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/net/Poller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#37#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/sys/eventfd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_AsyncLog.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-509">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/net/EventLoop.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding>
+            <element signature="e#98#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/net/Channel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#95#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/base/test_ThreadPool.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#37#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/net/EventLoop.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#37#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
