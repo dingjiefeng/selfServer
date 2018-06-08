@@ -7,6 +7,7 @@
 
 #include <chrono>
 #include <string>
+#include <typeinfo>
 
 class NonCopyable{
 public:
