@@ -51,8 +51,6 @@ namespace selfServer
 
             size_t queueSize() const;
 
-            //todo : timers
-
 
             void wakeup();
             //间接调用channel的接口实现
@@ -103,7 +101,7 @@ namespace selfServer
             steady_clock::time_point m_pollReturnTime;
 
             std::unique_ptr<Poller> m_poller;
-            //todo timerqueue
+
             int m_wakeupFd;
 
             std::unique_ptr<Channel> m_wakeupChannel;

@@ -37,7 +37,6 @@ EventLoop::EventLoop()
       m_iteration(0),
       m_threadId(static_cast<const pid_t>(syscall(SYS_gettid))),
       m_poller(Poller::newDefaultPoller(this)),
-      //todo timerqueue
       m_wakeupFd(createEventfd()),
       m_wakeupChannel(new Channel(this, m_wakeupFd)),
       m_currentActiveChannel(nullptr)
