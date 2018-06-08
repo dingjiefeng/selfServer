@@ -18,12 +18,24 @@ static_assert(EPOLLERR == POLLERR,      "epoll uses same flag values as poll");
 static_assert(EPOLLHUP == POLLHUP,      "epoll uses same flag values as poll");
 
 //poller
+/**
+ * @brief 构造函数 初始化宿主eventloop
+ * poller 和 eventloop ,channel之间的关系是
+ *  eventloop只存在于一个线程中, loop拥有一个poller负责IO multiplexing
+ *  poller与loop拥有相同的生命期,且只被一个loop拥有,所以无需考虑多线程race,操作无需加锁
+ *  poller不拥有channel,poller间接的调用channel,故在poller析构之前需要调用removeChannel来unregister
+ *
+ * @param loop
+ */
 Poller::Poller(EventLoop *loop)
     : m_ownerLoop(loop)
 {
 
 }
 
+/**
+ * @brief poller并不拥有channel,所以析构函数中不需要delete channel*
+ */
 Poller::~Poller() = default;
 
 bool Poller::hasChannel(selfServer::net::Channel *channel) const
@@ -39,6 +51,12 @@ Poller *Poller::newDefaultPoller(EventLoop *loop)
 }
 
 //epoll
+/**
+ * @brief epollpoller 构造函数
+ * epoll_create1(flag)
+ * 创建epoll文件描述符
+ * @param loop
+ */
 EPollPoller::EPollPoller(EventLoop *loop)
         : Poller(loop),
           m_events(kInitEventListSize),
@@ -55,7 +73,20 @@ EPollPoller::~EPollPoller()
     ::close(m_epollFd);
 }
 
-time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
+/**
+ * @brief
+ * int epoll_wait(int epfd, struct epoll_event* events, int maxEvents, int timeout)
+ * epfd : epoll_fd
+ * events: 从内核得到时间的集合
+ * maxEvents : 集合的大小
+ * timeout : 超时时间
+ * 返回值 :==0表示超时
+ *        >0 表示事件个数
+ * @param timeOutMs
+ * @param activeChannels
+ * @return
+ */
+steady_clock::time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
 {
     LOG_INFO << "fd total count " << m_Channels.size();
     int numEvents = ::epoll_wait(m_epollFd,
@@ -68,6 +99,7 @@ time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
     {
         LOG_INFO << numEvents << " events happened";
         fillActiveChannels(numEvents, activeChannels);
+        //如果size达到既定大小 主动进行扩容
         if ( numEvents == m_events.size())
         {
             m_events.resize(m_events.size()*2);
@@ -91,6 +123,7 @@ time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
  * EPOLL_CTL_ADD : 注册新的fd到epfd中
  * EPOLL_CTL_MOD : 修改已注册的fd的监听事件
  * EPOLL_CTL_DEL : 从epfd中删除一个fd
+ * @brief
  * @param channel
  */
 void EPollPoller::updateChannel(Channel *channel)
@@ -182,13 +215,17 @@ void EPollPoller::fillActiveChannels(int numEvents,
 
 void EPollPoller::update(int operation, Channel *channel)
 {
-    struct epoll_event event;
+    struct epoll_event event{};
     bzero(&event, sizeof event);
-    event.events = channel->events();
+    event.events = static_cast<uint32_t>(channel->events());
     event.data.ptr = channel;
     int fd = channel->fd();
     LOG_INFO << "epoll_ctl op = " << operationToString(operation)
              << " fd = " << fd
-                         << " event = { " << channel->
+                         << " event = { " << channel->eventsToString() << " }";
+    if (::epoll_ctl(m_epollFd, operation, fd, &event) < 0)
+    {
+        LOG_FATAL << "epoll_ctl op =" << operationToString(operation) << " fd =" << fd;
+    }
 
 }

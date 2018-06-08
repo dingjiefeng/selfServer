@@ -10,6 +10,7 @@
 #include <map>
 #include "../base/base.h"
 #include "EventLoop.h"
+#include "Channel.h"
 #include <chrono>
 #include <sys/poll.h>
 #include <sys/epoll.h>
@@ -21,8 +22,6 @@ namespace selfServer
 {
     namespace net
     {
-        class Channel;
-
         const int kNew = -1;
         const int kAdded = 1;
         const int kDeleted = 2;
@@ -35,14 +34,15 @@ namespace selfServer
             explicit Poller(EventLoop* loop);
 
             ~Poller() override ;
+
+            //interface
             virtual steady_clock::time_point poll(int timeOutMs, ChannelList* activeChannels) = 0;
-
             virtual void updateChannel(Channel* channel) = 0;
-
             virtual void removeChannel(Channel* channel) = 0;
 
             virtual bool hasChannel(Channel* channel) const;
 
+             //间接调用宿主loop的方法
             void assertInLoopThread() const { m_ownerLoop->assertInLoopThread();}
 
             static Poller* newDefaultPoller(EventLoop* loop);

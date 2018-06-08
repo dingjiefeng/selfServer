@@ -8,6 +8,9 @@
 
 #include "../base/base.h"
 #include <functional>
+#include <memory>
+
+using namespace std::chrono;
 
 namespace selfServer
 {
@@ -21,20 +24,22 @@ namespace selfServer
         {
         public:
             typedef std::function<void()> EventCallback;
+            //typedef std::function<void(steady_clock::time_point)> ReadEventCallback;
 
             Channel(EventLoop* loop, int fd);
 
             void handleEvent();
 
-            void setReadCallback(
-                    std::_Bind_helper<0, void (selfServer::net::EventLoop::*)(), selfServer::net::EventLoop *>::type cb)
+            void setReadCallback(EventCallback cb)
             { m_readCallback = std::move(cb);}
-
             void setWriteCallback(EventCallback cb)
             { m_writeCallback = std::move(cb);}
-
             void setErrorCallback(EventCallback cb)
             { m_errorCallback = std::move(cb);}
+
+            /// Tie this channel to the owner object managed by shared_ptr,
+            /// prevent the owner object being destroyed in handleEvent.
+            void tie(const std::shared_ptr<void>&);
 
             int fd() const { return m_fd;}
 
@@ -45,6 +50,13 @@ namespace selfServer
             bool isNoneEvent() const { return m_events == kNoneEvent;}
 
             void enableReading() { m_events |= kReadEvent; update();}
+            void disableReading() { m_events &= ~kReadEvent; update(); }
+            void enableWriting() { m_events |= kWriteEvent; update(); }
+            void disableWriting() { m_events &= ~kWriteEvent; update(); }
+            void disableAll() { m_events = kNoneEvent; update(); }
+            bool isWriting() const { return static_cast<bool>(m_events & kWriteEvent); }
+            bool isReading() const { return static_cast<bool>(m_events & kReadEvent); }
+
 
             //for poller
             int index() const { return m_index;}
@@ -55,9 +67,11 @@ namespace selfServer
             std::string reventsToString() const;
             std::string eventsToString() const;
 
+            void remove();
         private:
 
             void update();
+            void handleEventWithGuard();
 
             static const int kNoneEvent;
             static const int kReadEvent;
@@ -69,9 +83,16 @@ namespace selfServer
             int m_revents;
             int m_index;
 
+            std::weak_ptr<void> m_tie;
+            bool m_tied;
+            bool m_eventHandling;
+            bool m_addedToLoop;
+
+
             EventCallback m_readCallback;
             EventCallback m_writeCallback;
             EventCallback m_errorCallback;
+            EventCallback m_closeCallback;
         };
     }
 }

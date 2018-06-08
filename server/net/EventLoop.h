@@ -14,6 +14,7 @@
 #include <memory>
 #include "Channel.h"
 #include "../base/base.h"
+#include <sys/socket.h>
 
 using namespace std::chrono;
 
@@ -21,7 +22,6 @@ namespace selfServer
 {
     namespace net
     {
-        class Channel;
         class Poller;
 
         /**
@@ -55,8 +55,10 @@ namespace selfServer
 
 
             void wakeup();
+            //间接调用channel的接口实现
             void updateChannel(Channel* channel);
             void removeChannel(Channel* channel);
+
             bool hasChannel(Channel* channel);
 
             void assertInLoopThread()

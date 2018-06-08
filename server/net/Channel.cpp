@@ -37,22 +37,7 @@ selfServer::net::Channel::Channel(selfServer::net::EventLoop *loop, int fd)
 
 void Channel::handleEvent()
 {
-    if (m_revents & POLLNVAL){
-        LOG_INFO << "Channel::handleEvent() POLLNVAL";
-    }
-
-    if (m_revents & (POLLERR | POLLNVAL)){
-        if (m_errorCallback) m_errorCallback();
-    }
-
-    if (m_revents & (POLLIN | POLLPRI | POLLHUP)){
-        if (m_readCallback) m_readCallback();
-    }
-
-    if (m_revents & POLLOUT){
-        if (m_writeCallback) m_writeCallback();
-    }
-
+    handleEventWithGuard();
 }
 
 void Channel::update()
@@ -68,6 +53,41 @@ std::string Channel::reventsToString() const
 std::string Channel::eventsToString() const
 {
 
+}
+
+void Channel::remove()
+{
+
+}
+
+void Channel::handleEventWithGuard()
+{
+    m_eventHandling = true;
+    LOG_INFO << reventsToString();
+    if ((m_revents & POLLHUP) && !(m_revents & POLLIN))
+    {
+        LOG_FATAL << "fd = " << m_fd << " Channel::handle_event() POLLHUP";
+        if (m_closeCallback) m_closeCallback();
+    }
+
+    if (m_revents & POLLNVAL)
+    {
+        LOG_FATAL << "fd = " << m_fd << " Channel::handle_event() POLLNVAL";
+    }
+
+    if (m_revents & (POLLERR | POLLNVAL))
+    {
+        if (m_errorCallback) m_errorCallback();
+    }
+    if (m_revents & (POLLIN | POLLPRI | POLLRDHUP))
+    {
+        if (m_readCallback) m_readCallback();
+    }
+    if (m_revents & POLLOUT)
+    {
+        if (m_writeCallback) m_writeCallback();
+    }
+    m_eventHandling = false;
 }
 
 
