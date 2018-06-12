@@ -46,12 +46,13 @@ Epoller::~Epoller()
     ::close(m_epollFd);
 }
 
-bool Epoller::hasChannel(selfServer::net::Channel *channel) const
+bool Epoller::hasChannel(Channel *channel) const
 {
     assertInLoopThread();
     auto it = m_Channels.find(channel->fd());
     return it != m_Channels.end() && it->second == channel;
 }
+
 /**
  * @brief
  * int epoll_wait(int epfd, struct epoll_event* events, int maxEvents, int timeout)
@@ -194,7 +195,7 @@ void Epoller::fillActiveChannels(int numEvents,
 
 void Epoller::update(int operation, Channel *channel)
 {
-    struct epoll_event event{};
+    epoll_event event{};
     bzero(&event, sizeof event);
     event.events = static_cast<uint32_t>(channel->events());
     event.data.ptr = channel;
@@ -206,4 +207,9 @@ void Epoller::update(int operation, Channel *channel)
         LOG_FATAL << "epoll_ctl op =" << operationToString(operation) << " fd =" << fd;
     }
 
+}
+
+void Epoller::assertInLoopThread() const
+{
+    m_ownerLoop->assertInLoopThread();
 }

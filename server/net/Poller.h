@@ -15,7 +15,6 @@
 #include <sys/poll.h>
 #include <sys/epoll.h>
 
-//only use epoll
 
 using namespace std::chrono;
 namespace selfServer
@@ -34,17 +33,18 @@ namespace selfServer
 
             ~Epoller() override;
 
-            steady_clock::time_point poll(int timeOutMs, ChannelList* activeChannels) override;
+            steady_clock::time_point poll(int timeOutMs, ChannelList* activeChannels);
 
             void updateChannel(Channel* channel);
 
             void removeChannel(Channel* channel);
             virtual bool hasChannel(Channel* channel) const;
-            void assertInLoopThread() const { m_ownerLoop->assertInLoopThread();}
-
+            void assertInLoopThread() const;
 
         private:
             typedef std::map<int, Channel*> ChannelMap;
+            typedef std::vector<epoll_event> EventList;
+
             ChannelMap m_Channels;
             EventLoop* m_ownerLoop;
 
@@ -54,8 +54,6 @@ namespace selfServer
             void fillActiveChannels(int numEvents,
                                     ChannelList* activeChannels) const;
             void update(int operation, Channel* channel);
-
-            typedef std::vector<struct epoll_event> EventList;
 
             int m_epollFd;
             EventList m_events;
