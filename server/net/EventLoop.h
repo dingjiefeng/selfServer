@@ -63,6 +63,7 @@ namespace selfServer
             void doPendingFunctors();
 
             typedef std::vector<Channel*> ChannelList;
+
             bool m_looping;
             bool m_quit;
             bool m_eventHandling;

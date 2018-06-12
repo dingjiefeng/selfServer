@@ -71,7 +71,7 @@ void Channel::update()
 
 void Channel::remove()
 {
-
+    m_loop->removeChannel(this);
 }
 
 

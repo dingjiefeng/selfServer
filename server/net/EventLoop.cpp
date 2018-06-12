@@ -97,7 +97,7 @@ void EventLoop::loop()
     while (!m_quit)
     {
         m_activeChannels.clear();
-
+        m_epoller->poll(kPollTimeMs, &m_activeChannels);
         m_eventHandling = true;
         for (Channel* channel : m_activeChannels)
         {

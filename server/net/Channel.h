@@ -37,10 +37,6 @@ namespace selfServer
             void setErrorCallback(EventCallback cb)
             { m_errorCallback = std::move(cb);}
 
-            /// Tie this channel to the owner object managed by shared_ptr,
-            /// prevent the owner object being destroyed in handleEvent.
-//            void tie(const std::shared_ptr<void>&);
-
             int fd() const { return m_fd;}
 
             int events() const { return m_events;}
@@ -78,9 +74,6 @@ namespace selfServer
             int m_events;
             int m_revents;
             int m_index;
-
-            std::weak_ptr<void> m_tie;
-
 
             EventCallback m_readCallback;
             EventCallback m_writeCallback;
