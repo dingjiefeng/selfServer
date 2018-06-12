@@ -25,51 +25,29 @@ namespace selfServer
         const int kNew = -1;
         const int kAdded = 1;
         const int kDeleted = 2;
-
-        class Poller : public NonCopyable
+        class Epoller : public NonCopyable
         {
         public:
             typedef std::vector<Channel*> ChannelList;
 
-            explicit Poller(EventLoop* loop);
+            explicit Epoller(EventLoop* loop);
 
-            ~Poller() override ;
-
-            //interface
-            virtual steady_clock::time_point poll(int timeOutMs, ChannelList* activeChannels) = 0;
-            virtual void updateChannel(Channel* channel) = 0;
-            virtual void removeChannel(Channel* channel) = 0;
-
-            virtual bool hasChannel(Channel* channel) const;
-
-             //间接调用宿主loop的方法
-            void assertInLoopThread() const { m_ownerLoop->assertInLoopThread();}
-
-            static Poller* newDefaultPoller(EventLoop* loop);
-
-        protected:
-            typedef std::map<int, Channel*> ChannelMap;
-            ChannelMap m_Channels;
-
-        private:
-            EventLoop* m_ownerLoop;
-
-        };
-
-        class EPollPoller : public Poller
-        {
-        public:
-            explicit EPollPoller(EventLoop* loop);
-
-            ~EPollPoller() override;
+            ~Epoller() override;
 
             steady_clock::time_point poll(int timeOutMs, ChannelList* activeChannels) override;
 
-            void updateChannel(Channel* channel) override;
+            void updateChannel(Channel* channel);
 
-            void removeChannel(Channel* channel) override;
+            void removeChannel(Channel* channel);
+            virtual bool hasChannel(Channel* channel) const;
+            void assertInLoopThread() const { m_ownerLoop->assertInLoopThread();}
+
 
         private:
+            typedef std::map<int, Channel*> ChannelMap;
+            ChannelMap m_Channels;
+            EventLoop* m_ownerLoop;
+
             static const int kInitEventListSize = 16;
             static std::string operationToString(int op);
 

@@ -17,62 +17,41 @@ static_assert(EPOLLRDHUP == POLLRDHUP,  "epoll uses same flag values as poll");
 static_assert(EPOLLERR == POLLERR,      "epoll uses same flag values as poll");
 static_assert(EPOLLHUP == POLLHUP,      "epoll uses same flag values as poll");
 
-//poller
+
 /**
  * @brief 构造函数 初始化宿主eventloop
- * poller 和 eventloop ,channel之间的关系是
+ * epoller 和 eventloop ,channel之间的关系是
  *  eventloop只存在于一个线程中, loop拥有一个poller负责IO multiplexing
  *  poller与loop拥有相同的生命期,且只被一个loop拥有,所以无需考虑多线程race,操作无需加锁
  *  poller不拥有channel,poller间接的调用channel,故在poller析构之前需要调用removeChannel来unregister
  *
  * @param loop
  */
-Poller::Poller(EventLoop *loop)
-    : m_ownerLoop(loop)
-{
-
-}
-
-/**
- * @brief poller并不拥有channel,所以析构函数中不需要delete channel*
- */
-Poller::~Poller() = default;
-
-bool Poller::hasChannel(selfServer::net::Channel *channel) const
-{
-    assertInLoopThread();
-    auto it = m_Channels.find(channel->fd());
-    return it != m_Channels.end() && it->second == channel;
-}
-
-Poller *Poller::newDefaultPoller(EventLoop *loop)
-{
-    return new EPollPoller(loop);
-}
-
-//epoll
-/**
- * @brief epollpoller 构造函数
- * epoll_create1(flag)
- * 创建epoll文件描述符
- * @param loop
- */
-EPollPoller::EPollPoller(EventLoop *loop)
-        : Poller(loop),
+Epoller::Epoller(EventLoop *loop)
+        : m_ownerLoop(loop),
           m_events(kInitEventListSize),
           m_epollFd(::epoll_create1(EPOLL_CLOEXEC))
 {
     if (m_epollFd < 0)
     {
-        LOG_FATAL << "EPollPoller::EPollPoller";
+        LOG_FATAL << "Epoller::Epoller";
     }
 }
 
-EPollPoller::~EPollPoller()
+/**
+ * @brief epoller并不拥有channel,所以析构函数中不需要delete channel*
+ */
+Epoller::~Epoller()
 {
     ::close(m_epollFd);
 }
 
+bool Epoller::hasChannel(selfServer::net::Channel *channel) const
+{
+    assertInLoopThread();
+    auto it = m_Channels.find(channel->fd());
+    return it != m_Channels.end() && it->second == channel;
+}
 /**
  * @brief
  * int epoll_wait(int epfd, struct epoll_event* events, int maxEvents, int timeout)
@@ -86,7 +65,7 @@ EPollPoller::~EPollPoller()
  * @param activeChannels
  * @return
  */
-steady_clock::time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *activeChannels)
+steady_clock::time_point Epoller::poll(int timeOutMs, ChannelList *activeChannels)
 {
     LOG_INFO << "fd total count " << m_Channels.size();
     int numEvents = ::epoll_wait(m_epollFd,
@@ -113,7 +92,7 @@ steady_clock::time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *a
         if (savedErrno != EINTR)
         {
             errno = savedErrno;
-            LOG_INFO << "EPollPoller::Poll() Error";
+            LOG_INFO << "Epoller::Poll() Error";
         }
     }
     return now;
@@ -126,9 +105,9 @@ steady_clock::time_point EPollPoller::poll(int timeOutMs, Poller::ChannelList *a
  * @brief
  * @param channel
  */
-void EPollPoller::updateChannel(Channel *channel)
+void Epoller::updateChannel(Channel *channel)
 {
-    Poller::assertInLoopThread();
+    assertInLoopThread();
     const int index = channel->index();
     LOG_INFO << "fd = " << channel->fd()
              << " events = " << channel->events()
@@ -164,9 +143,9 @@ void EPollPoller::updateChannel(Channel *channel)
     }
 }
 
-void EPollPoller::removeChannel(Channel *channel)
+void Epoller::removeChannel(Channel *channel)
 {
-    Poller::assertInLoopThread();
+    assertInLoopThread();
     int fd = channel->fd();
     LOG_INFO << "fd = " << fd;
     assert(m_Channels.find(fd) != m_Channels.end());
@@ -184,7 +163,7 @@ void EPollPoller::removeChannel(Channel *channel)
     channel->set_index(kNew);
 }
 
-std::string EPollPoller::operationToString(int op)
+std::string Epoller::operationToString(int op)
 {
     switch (op)
     {
@@ -201,8 +180,8 @@ std::string EPollPoller::operationToString(int op)
     }
 }
 
-void EPollPoller::fillActiveChannels(int numEvents,
-                                     Poller::ChannelList *activeChannels) const
+void Epoller::fillActiveChannels(int numEvents,
+                                     ChannelList *activeChannels) const
 {
     assert(numEvents <= m_events.size());
     for (int i = 0; i < numEvents; ++i)
@@ -213,7 +192,7 @@ void EPollPoller::fillActiveChannels(int numEvents,
     }
 }
 
-void EPollPoller::update(int operation, Channel *channel)
+void Epoller::update(int operation, Channel *channel)
 {
     struct epoll_event event{};
     bzero(&event, sizeof event);
@@ -221,8 +200,7 @@ void EPollPoller::update(int operation, Channel *channel)
     event.data.ptr = channel;
     int fd = channel->fd();
     LOG_INFO << "epoll_ctl op = " << operationToString(operation)
-             << " fd = " << fd
-                         << " event = { " << channel->eventsToString() << " }";
+             << " fd = " << fd;
     if (::epoll_ctl(m_epollFd, operation, fd, &event) < 0)
     {
         LOG_FATAL << "epoll_ctl op =" << operationToString(operation) << " fd =" << fd;

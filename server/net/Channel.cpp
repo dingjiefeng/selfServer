@@ -4,6 +4,7 @@
 
 #include <poll.h>
 #include "Channel.h"
+#include "EventLoop.h"
 #include "../base/Logging.h"
 
 using namespace selfServer;
@@ -37,33 +38,6 @@ selfServer::net::Channel::Channel(selfServer::net::EventLoop *loop, int fd)
 
 void Channel::handleEvent()
 {
-    handleEventWithGuard();
-}
-
-void Channel::update()
-{
-
-}
-
-std::string Channel::reventsToString() const
-{
-
-}
-
-std::string Channel::eventsToString() const
-{
-
-}
-
-void Channel::remove()
-{
-
-}
-
-void Channel::handleEventWithGuard()
-{
-    m_eventHandling = true;
-    LOG_INFO << reventsToString();
     if ((m_revents & POLLHUP) && !(m_revents & POLLIN))
     {
         LOG_FATAL << "fd = " << m_fd << " Channel::handle_event() POLLHUP";
@@ -87,8 +61,19 @@ void Channel::handleEventWithGuard()
     {
         if (m_writeCallback) m_writeCallback();
     }
-    m_eventHandling = false;
 }
+
+void Channel::update()
+{
+    m_loop->updateChannel(this);
+}
+
+
+void Channel::remove()
+{
+
+}
+
 
 
 

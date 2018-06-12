@@ -34,9 +34,8 @@ EventLoop::EventLoop()
       m_quit(false),
       m_eventHandling(false),
       m_callingPendingFunctors(false),
-      m_iteration(0),
       m_threadId(static_cast<const pid_t>(syscall(SYS_gettid))),
-      m_poller(Poller::newDefaultPoller(this)),
+      m_epoller(new Epoller(this)),
       m_wakeupFd(createEventfd()),
       m_wakeupChannel(new Channel(this, m_wakeupFd)),
       m_currentActiveChannel(nullptr)
@@ -98,8 +97,6 @@ void EventLoop::loop()
     while (!m_quit)
     {
         m_activeChannels.clear();
-        m_pollReturnTime = m_poller->poll(kPollTimeMs, &m_activeChannels);
-        ++m_iteration;
 
         m_eventHandling = true;
         for (Channel* channel : m_activeChannels)
@@ -174,7 +171,7 @@ void EventLoop::updateChannel(Channel *channel)
 {
     assert(channel->ownerLoop() == this);
     assertInLoopThread();
-    m_poller->updateChannel(channel);
+    m_epoller->updateChannel(channel);
 }
 
 void EventLoop::removeChannel(Channel *channel)
@@ -186,14 +183,14 @@ void EventLoop::removeChannel(Channel *channel)
         assert(m_currentActiveChannel == channel ||
                std::find(m_activeChannels.begin(), m_activeChannels.end(), channel) == m_activeChannels.end());
     }
-    m_poller->removeChannel(channel);
+    m_epoller->removeChannel(channel);
 }
 
 bool EventLoop::hasChannel(Channel *channel)
 {
     assert(channel->ownerLoop() == this);
     assertInLoopThread();
-    return m_poller->hasChannel(channel);
+    return m_epoller->hasChannel(channel);
 }
 
 void EventLoop::handleRead()
@@ -220,14 +217,6 @@ void EventLoop::doPendingFunctors()
         functor();
     }
     m_callingPendingFunctors = false;
-}
-
-void EventLoop::printActiveChannels() const
-{
-    for (const Channel* channel : m_activeChannels)
-    {
-        LOG_INFO << "{" << channel->reventsToString() << "} ";
-    }
 }
 
 

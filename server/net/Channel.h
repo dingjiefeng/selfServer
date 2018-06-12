@@ -39,7 +39,7 @@ namespace selfServer
 
             /// Tie this channel to the owner object managed by shared_ptr,
             /// prevent the owner object being destroyed in handleEvent.
-            void tie(const std::shared_ptr<void>&);
+//            void tie(const std::shared_ptr<void>&);
 
             int fd() const { return m_fd;}
 
@@ -64,14 +64,10 @@ namespace selfServer
 
             EventLoop* ownerLoop() { return m_loop;}
 
-            std::string reventsToString() const;
-            std::string eventsToString() const;
-
             void remove();
         private:
 
             void update();
-            void handleEventWithGuard();
 
             static const int kNoneEvent;
             static const int kReadEvent;
@@ -84,9 +80,6 @@ namespace selfServer
             int m_index;
 
             std::weak_ptr<void> m_tie;
-            bool m_tied;
-            bool m_eventHandling;
-            bool m_addedToLoop;
 
 
             EventCallback m_readCallback;
