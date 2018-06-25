@@ -360,6 +360,9 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/Tests/base/test_ThreadPool.cpp">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/Tests/net/test_Channel.cpp">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/Tests/net/test_EventLoop.cpp">
 			<Option target="webServer"/>
 		</Unit>
@@ -420,10 +423,19 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/server/base/base.h">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Acceptor.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Acceptor.h">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Channel.cpp">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Channel.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/ChannelCallback.h">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoop.cpp">
@@ -432,10 +444,40 @@
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoop.h">
 			<Option target="webServer"/>
 		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoopThread.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoopThread.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoopThreadPool.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/EventLoopThreadPool.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/InetAddress.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/InetAddress.h">
+			<Option target="webServer"/>
+		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Poller.cpp">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/server/net/Poller.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/TcpConnection.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/TcpConnection.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/TcpServer.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/home/jeff/Desktop/selfServer/server/net/TcpServer.h">
 			<Option target="webServer"/>
 		</Unit>
 		<Unit filename="/home/jeff/Desktop/selfServer/CMakeLists.txt">

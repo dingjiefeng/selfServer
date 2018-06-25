@@ -18,6 +18,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o"
   "CMakeFiles/webServer.dir/server/net/Poller.cpp.o"
   "CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o"
+  "CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o"
+  "CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o"
   "webServer.pdb"
   "webServer"
 )

@@ -310,6 +310,96 @@ CMakeFiles/webServer.dir/Tests/base/test_Logging.cpp.o
  /home/jeff/Desktop/selfServer/server/base/Logging.h
  /home/jeff/Desktop/selfServer/server/base/ThreadPool.h
  /home/jeff/Desktop/selfServer/server/base/base.h
+CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o
+ ../lib/googletest/googlemock/include/gmock/gmock-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-nice-strict.h
+ ../lib/googletest/googlemock/include/gmock/gmock-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-more-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-more-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-spec-builders.h
+ ../lib/googletest/googlemock/include/gmock/gmock.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-matchers.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-port.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-generated-internal-utils.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-port.h
+ ../lib/googletest/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest/googletest/include/gtest/gtest-message.h
+ ../lib/googletest/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest/googletest/include/gtest/gtest.h
+ ../lib/googletest/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
+ /home/jeff/Desktop/selfServer/Tests/base/test_ThreadPool.cpp
+ /home/jeff/Desktop/selfServer/server/base/ThreadPool.h
+ /home/jeff/Desktop/selfServer/server/base/base.h
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o
+ ../lib/googletest/googlemock/include/gmock/gmock-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-generated-nice-strict.h
+ ../lib/googletest/googlemock/include/gmock/gmock-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-more-actions.h
+ ../lib/googletest/googlemock/include/gmock/gmock-more-matchers.h
+ ../lib/googletest/googlemock/include/gmock/gmock-spec-builders.h
+ ../lib/googletest/googlemock/include/gmock/gmock.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-matchers.h
+ ../lib/googletest/googlemock/include/gmock/internal/custom/gmock-port.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-generated-internal-utils.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h
+ ../lib/googletest/googlemock/include/gmock/internal/gmock-port.h
+ ../lib/googletest/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest/googletest/include/gtest/gtest-message.h
+ ../lib/googletest/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest/googletest/include/gtest/gtest.h
+ ../lib/googletest/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
+ /home/jeff/Desktop/selfServer/Tests/net/test_Channel.cpp
+ /home/jeff/Desktop/selfServer/server/base/LogStream.h
+ /home/jeff/Desktop/selfServer/server/base/Logging.h
+ /home/jeff/Desktop/selfServer/server/base/base.h
+ /home/jeff/Desktop/selfServer/server/net/Channel.h
+ /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.h
 CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o
  ../lib/googletest/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
@@ -352,7 +442,9 @@ CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o
  ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
  /home/jeff/Desktop/selfServer/Tests/net/test_EventLoop.cpp
  /home/jeff/Desktop/selfServer/server/base/base.h
+ /home/jeff/Desktop/selfServer/server/net/Channel.h
  /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.h
 CMakeFiles/webServer.dir/main.cpp.o
  ../lib/googletest/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest/googlemock/include/gmock/gmock-cardinalities.h
@@ -393,8 +485,6 @@ CMakeFiles/webServer.dir/main.cpp.o
  ../lib/googletest/googletest/include/gtest/internal/gtest-string.h
  ../lib/googletest/googletest/include/gtest/internal/gtest-tuple.h
  ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
- /home/jeff/Desktop/selfServer/./server/base/ThreadPool.h
- /home/jeff/Desktop/selfServer/./server/base/base.h
  /home/jeff/Desktop/selfServer/main.cpp
 CMakeFiles/webServer.dir/server/base/AsyncLogging.cpp.o
  /home/jeff/Desktop/selfServer/server/base/AsyncLogging.cpp
@@ -429,11 +519,33 @@ CMakeFiles/webServer.dir/server/base/Logging.cpp.o
  /home/jeff/Desktop/selfServer/server/base/Logging.h
  /home/jeff/Desktop/selfServer/server/base/base.h
 CMakeFiles/webServer.dir/server/net/Channel.cpp.o
+ /home/jeff/Desktop/selfServer/server/base/LogStream.h
+ /home/jeff/Desktop/selfServer/server/base/Logging.h
+ /home/jeff/Desktop/selfServer/server/base/base.h
  /home/jeff/Desktop/selfServer/server/net/Channel.cpp
  /home/jeff/Desktop/selfServer/server/net/Channel.h
+ /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.h
 CMakeFiles/webServer.dir/server/net/EventLoop.cpp.o
  /home/jeff/Desktop/selfServer/server/base/LogStream.h
  /home/jeff/Desktop/selfServer/server/base/Logging.h
  /home/jeff/Desktop/selfServer/server/base/base.h
+ /home/jeff/Desktop/selfServer/server/net/Channel.h
  /home/jeff/Desktop/selfServer/server/net/EventLoop.cpp
  /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.h
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o
+ /home/jeff/Desktop/selfServer/server/base/base.h
+ /home/jeff/Desktop/selfServer/server/net/Channel.h
+ /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/EventLoopThread.cpp
+ /home/jeff/Desktop/selfServer/server/net/EventLoopThread.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.h
+CMakeFiles/webServer.dir/server/net/Poller.cpp.o
+ /home/jeff/Desktop/selfServer/server/base/LogStream.h
+ /home/jeff/Desktop/selfServer/server/base/Logging.h
+ /home/jeff/Desktop/selfServer/server/base/base.h
+ /home/jeff/Desktop/selfServer/server/net/Channel.h
+ /home/jeff/Desktop/selfServer/server/net/EventLoop.h
+ /home/jeff/Desktop/selfServer/server/net/Poller.cpp
+ /home/jeff/Desktop/selfServer/server/net/Poller.h

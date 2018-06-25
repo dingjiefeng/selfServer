@@ -513,6 +513,174 @@ CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o.provides: CMakeFiles/w
 CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o
 
 
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o: ../Tests/net/test_Channel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o -c /home/jeff/Desktop/selfServer/Tests/net/test_Channel.cpp
+
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/Tests/net/test_Channel.cpp > CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.i
+
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/Tests/net/test_Channel.cpp -o CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.s
+
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.requires
+
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.provides: CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.provides
+
+CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.provides.build: CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o: ../server/net/EventLoopThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o -c /home/jeff/Desktop/selfServer/server/net/EventLoopThread.cpp
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/EventLoopThread.cpp > CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.i
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/EventLoopThread.cpp -o CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.s
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.provides: CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o: ../server/net/Acceptor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o -c /home/jeff/Desktop/selfServer/server/net/Acceptor.cpp
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/Acceptor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/Acceptor.cpp > CMakeFiles/webServer.dir/server/net/Acceptor.cpp.i
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/Acceptor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/Acceptor.cpp -o CMakeFiles/webServer.dir/server/net/Acceptor.cpp.s
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.provides: CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o: ../server/net/InetAddress.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o -c /home/jeff/Desktop/selfServer/server/net/InetAddress.cpp
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/InetAddress.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/InetAddress.cpp > CMakeFiles/webServer.dir/server/net/InetAddress.cpp.i
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/InetAddress.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/InetAddress.cpp -o CMakeFiles/webServer.dir/server/net/InetAddress.cpp.s
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.provides: CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o: ../server/net/TcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o -c /home/jeff/Desktop/selfServer/server/net/TcpServer.cpp
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/TcpServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/TcpServer.cpp > CMakeFiles/webServer.dir/server/net/TcpServer.cpp.i
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/TcpServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/TcpServer.cpp -o CMakeFiles/webServer.dir/server/net/TcpServer.cpp.s
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.provides: CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o: ../server/net/TcpConnection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o -c /home/jeff/Desktop/selfServer/server/net/TcpConnection.cpp
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/TcpConnection.cpp > CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.i
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/TcpConnection.cpp -o CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.s
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.provides: CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o
+
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o: CMakeFiles/webServer.dir/flags.make
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o: ../server/net/EventLoopThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o -c /home/jeff/Desktop/selfServer/server/net/EventLoopThreadPool.cpp
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeff/Desktop/selfServer/server/net/EventLoopThreadPool.cpp > CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.i
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeff/Desktop/selfServer/server/net/EventLoopThreadPool.cpp -o CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.s
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.requires:
+
+.PHONY : CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.requires
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.provides: CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.requires
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.provides.build
+.PHONY : CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.provides
+
+CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.provides.build: CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o
+
+
 # Object files for target webServer
 webServer_OBJECTS = \
 "CMakeFiles/webServer.dir/main.cpp.o" \
@@ -533,7 +701,14 @@ webServer_OBJECTS = \
 "CMakeFiles/webServer.dir/server/net/Channel.cpp.o" \
 "CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o" \
 "CMakeFiles/webServer.dir/server/net/Poller.cpp.o" \
-"CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o"
+"CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o" \
+"CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o" \
+"CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o"
 
 # External object files for target webServer
 webServer_EXTERNAL_OBJECTS =
@@ -557,12 +732,19 @@ webServer: CMakeFiles/webServer.dir/server/net/Channel.cpp.o
 webServer: CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o
 webServer: CMakeFiles/webServer.dir/server/net/Poller.cpp.o
 webServer: CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o
+webServer: CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o
+webServer: CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o
 webServer: CMakeFiles/webServer.dir/build.make
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: lib/googletest/googlemock/gtest/libgtest_maind.a
 webServer: lib/googletest/googlemock/gtest/libgtestd.a
 webServer: CMakeFiles/webServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable webServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeff/Desktop/selfServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable webServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/webServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -589,6 +771,13 @@ CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/Channel.c
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/net/test_EventLoop.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/Poller.cpp.o.requires
 CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o.requires
+CMakeFiles/webServer.dir/requires: CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o.requires
 
 .PHONY : CMakeFiles/webServer.dir/requires
 

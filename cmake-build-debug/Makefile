@@ -437,6 +437,33 @@ Tests/base/test_ThreadPool.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/base/test_ThreadPool.cpp.s
 .PHONY : Tests/base/test_ThreadPool.cpp.s
 
+Tests/net/test_Channel.o: Tests/net/test_Channel.cpp.o
+
+.PHONY : Tests/net/test_Channel.o
+
+# target to build an object file
+Tests/net/test_Channel.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.o
+.PHONY : Tests/net/test_Channel.cpp.o
+
+Tests/net/test_Channel.i: Tests/net/test_Channel.cpp.i
+
+.PHONY : Tests/net/test_Channel.i
+
+# target to preprocess a source file
+Tests/net/test_Channel.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.i
+.PHONY : Tests/net/test_Channel.cpp.i
+
+Tests/net/test_Channel.s: Tests/net/test_Channel.cpp.s
+
+.PHONY : Tests/net/test_Channel.s
+
+# target to generate assembly for a file
+Tests/net/test_Channel.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/Tests/net/test_Channel.cpp.s
+.PHONY : Tests/net/test_Channel.cpp.s
+
 Tests/net/test_EventLoop.o: Tests/net/test_EventLoop.cpp.o
 
 .PHONY : Tests/net/test_EventLoop.o
@@ -653,6 +680,33 @@ server/base/Logging.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/base/Logging.cpp.s
 .PHONY : server/base/Logging.cpp.s
 
+server/net/Acceptor.o: server/net/Acceptor.cpp.o
+
+.PHONY : server/net/Acceptor.o
+
+# target to build an object file
+server/net/Acceptor.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/Acceptor.cpp.o
+.PHONY : server/net/Acceptor.cpp.o
+
+server/net/Acceptor.i: server/net/Acceptor.cpp.i
+
+.PHONY : server/net/Acceptor.i
+
+# target to preprocess a source file
+server/net/Acceptor.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/Acceptor.cpp.i
+.PHONY : server/net/Acceptor.cpp.i
+
+server/net/Acceptor.s: server/net/Acceptor.cpp.s
+
+.PHONY : server/net/Acceptor.s
+
+# target to generate assembly for a file
+server/net/Acceptor.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/Acceptor.cpp.s
+.PHONY : server/net/Acceptor.cpp.s
+
 server/net/Channel.o: server/net/Channel.cpp.o
 
 .PHONY : server/net/Channel.o
@@ -707,6 +761,87 @@ server/net/EventLoop.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoop.cpp.s
 .PHONY : server/net/EventLoop.cpp.s
 
+server/net/EventLoopThread.o: server/net/EventLoopThread.cpp.o
+
+.PHONY : server/net/EventLoopThread.o
+
+# target to build an object file
+server/net/EventLoopThread.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.o
+.PHONY : server/net/EventLoopThread.cpp.o
+
+server/net/EventLoopThread.i: server/net/EventLoopThread.cpp.i
+
+.PHONY : server/net/EventLoopThread.i
+
+# target to preprocess a source file
+server/net/EventLoopThread.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.i
+.PHONY : server/net/EventLoopThread.cpp.i
+
+server/net/EventLoopThread.s: server/net/EventLoopThread.cpp.s
+
+.PHONY : server/net/EventLoopThread.s
+
+# target to generate assembly for a file
+server/net/EventLoopThread.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThread.cpp.s
+.PHONY : server/net/EventLoopThread.cpp.s
+
+server/net/EventLoopThreadPool.o: server/net/EventLoopThreadPool.cpp.o
+
+.PHONY : server/net/EventLoopThreadPool.o
+
+# target to build an object file
+server/net/EventLoopThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.o
+.PHONY : server/net/EventLoopThreadPool.cpp.o
+
+server/net/EventLoopThreadPool.i: server/net/EventLoopThreadPool.cpp.i
+
+.PHONY : server/net/EventLoopThreadPool.i
+
+# target to preprocess a source file
+server/net/EventLoopThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.i
+.PHONY : server/net/EventLoopThreadPool.cpp.i
+
+server/net/EventLoopThreadPool.s: server/net/EventLoopThreadPool.cpp.s
+
+.PHONY : server/net/EventLoopThreadPool.s
+
+# target to generate assembly for a file
+server/net/EventLoopThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/EventLoopThreadPool.cpp.s
+.PHONY : server/net/EventLoopThreadPool.cpp.s
+
+server/net/InetAddress.o: server/net/InetAddress.cpp.o
+
+.PHONY : server/net/InetAddress.o
+
+# target to build an object file
+server/net/InetAddress.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/InetAddress.cpp.o
+.PHONY : server/net/InetAddress.cpp.o
+
+server/net/InetAddress.i: server/net/InetAddress.cpp.i
+
+.PHONY : server/net/InetAddress.i
+
+# target to preprocess a source file
+server/net/InetAddress.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/InetAddress.cpp.i
+.PHONY : server/net/InetAddress.cpp.i
+
+server/net/InetAddress.s: server/net/InetAddress.cpp.s
+
+.PHONY : server/net/InetAddress.s
+
+# target to generate assembly for a file
+server/net/InetAddress.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/InetAddress.cpp.s
+.PHONY : server/net/InetAddress.cpp.s
+
 server/net/Poller.o: server/net/Poller.cpp.o
 
 .PHONY : server/net/Poller.o
@@ -733,6 +868,60 @@ server/net/Poller.s: server/net/Poller.cpp.s
 server/net/Poller.cpp.s:
 	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/Poller.cpp.s
 .PHONY : server/net/Poller.cpp.s
+
+server/net/TcpConnection.o: server/net/TcpConnection.cpp.o
+
+.PHONY : server/net/TcpConnection.o
+
+# target to build an object file
+server/net/TcpConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.o
+.PHONY : server/net/TcpConnection.cpp.o
+
+server/net/TcpConnection.i: server/net/TcpConnection.cpp.i
+
+.PHONY : server/net/TcpConnection.i
+
+# target to preprocess a source file
+server/net/TcpConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.i
+.PHONY : server/net/TcpConnection.cpp.i
+
+server/net/TcpConnection.s: server/net/TcpConnection.cpp.s
+
+.PHONY : server/net/TcpConnection.s
+
+# target to generate assembly for a file
+server/net/TcpConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpConnection.cpp.s
+.PHONY : server/net/TcpConnection.cpp.s
+
+server/net/TcpServer.o: server/net/TcpServer.cpp.o
+
+.PHONY : server/net/TcpServer.o
+
+# target to build an object file
+server/net/TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpServer.cpp.o
+.PHONY : server/net/TcpServer.cpp.o
+
+server/net/TcpServer.i: server/net/TcpServer.cpp.i
+
+.PHONY : server/net/TcpServer.i
+
+# target to preprocess a source file
+server/net/TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpServer.cpp.i
+.PHONY : server/net/TcpServer.cpp.i
+
+server/net/TcpServer.s: server/net/TcpServer.cpp.s
+
+.PHONY : server/net/TcpServer.s
+
+# target to generate assembly for a file
+server/net/TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/webServer.dir/build.make CMakeFiles/webServer.dir/server/net/TcpServer.cpp.s
+.PHONY : server/net/TcpServer.cpp.s
 
 # Help Target
 help:
@@ -775,6 +964,9 @@ help:
 	@echo "... Tests/base/test_ThreadPool.o"
 	@echo "... Tests/base/test_ThreadPool.i"
 	@echo "... Tests/base/test_ThreadPool.s"
+	@echo "... Tests/net/test_Channel.o"
+	@echo "... Tests/net/test_Channel.i"
+	@echo "... Tests/net/test_Channel.s"
 	@echo "... Tests/net/test_EventLoop.o"
 	@echo "... Tests/net/test_EventLoop.i"
 	@echo "... Tests/net/test_EventLoop.s"
@@ -799,15 +991,33 @@ help:
 	@echo "... server/base/Logging.o"
 	@echo "... server/base/Logging.i"
 	@echo "... server/base/Logging.s"
+	@echo "... server/net/Acceptor.o"
+	@echo "... server/net/Acceptor.i"
+	@echo "... server/net/Acceptor.s"
 	@echo "... server/net/Channel.o"
 	@echo "... server/net/Channel.i"
 	@echo "... server/net/Channel.s"
 	@echo "... server/net/EventLoop.o"
 	@echo "... server/net/EventLoop.i"
 	@echo "... server/net/EventLoop.s"
+	@echo "... server/net/EventLoopThread.o"
+	@echo "... server/net/EventLoopThread.i"
+	@echo "... server/net/EventLoopThread.s"
+	@echo "... server/net/EventLoopThreadPool.o"
+	@echo "... server/net/EventLoopThreadPool.i"
+	@echo "... server/net/EventLoopThreadPool.s"
+	@echo "... server/net/InetAddress.o"
+	@echo "... server/net/InetAddress.i"
+	@echo "... server/net/InetAddress.s"
 	@echo "... server/net/Poller.o"
 	@echo "... server/net/Poller.i"
 	@echo "... server/net/Poller.s"
+	@echo "... server/net/TcpConnection.o"
+	@echo "... server/net/TcpConnection.i"
+	@echo "... server/net/TcpConnection.s"
+	@echo "... server/net/TcpServer.o"
+	@echo "... server/net/TcpServer.i"
+	@echo "... server/net/TcpServer.s"
 .PHONY : help
 
 
