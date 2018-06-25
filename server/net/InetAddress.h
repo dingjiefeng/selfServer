@@ -21,7 +21,8 @@ namespace selfServer
         public:
             explicit InetAddress(uint16_t port = 0, bool loopbackOnly = false);
 
-            explicit InetAddress(std::string ip, uint16_t port = 0);
+            //允许使用隐式类型转换
+            InetAddress(std::string ip, uint16_t port = 0);
             explicit InetAddress(const struct sockaddr_in& addr)
                     : m_addr(addr)
             {}
@@ -37,8 +38,13 @@ namespace selfServer
             // return true on success.
             // thread safe
             static bool resolve(std::string hostname, InetAddress* out);
-        private:
-            struct sockaddr_in m_addr;
+//        private:
+            union
+            {
+                sockaddr_in m_addr;
+                sockaddr_in6 m_addr6;
+            };
+
         };
     }
 }
