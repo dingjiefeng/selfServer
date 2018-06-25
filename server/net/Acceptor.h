@@ -9,35 +9,37 @@
 #include <string>
 #include <functional>
 #include "ChannelCallback.h"
+#include "Channel.h"
 #include <memory>
+#include <utility>
 
 namespace selfServer
 {
     namespace net
     {
-        class EventLoop;
         class InetAddress;
-        class Channel;
 
         class Acceptor: public ChannelCallback
         {
         public:
-            typedef std::function<void(int sockfd)> acceptorCallBack;
+            typedef std::function<void(int sockfd, const InetAddress&)> acceptorCallBack;
 
-            explicit Acceptor(EventLoop* ploop);
-            ~Acceptor() override = default;
+            Acceptor(EventLoop* ploop, const InetAddress& listenAddr, bool requestport);
+            ~Acceptor() override ;
 
-            void start();
-            void setCallback(acceptorCallBack& callBackFunc);
-            void handleRead() override;
-            void handleWrite() override;
+            void setNewConnectionCallback(acceptorCallBack callBackFunc)
+            { m_callBack = std::move(callBackFunc);}
+
+            void listen();
         private:
-            int createAndListen();
+            void handleRead() override;
 
+            EventLoop* mp_pLoop;
             int m_listenFd;
-            Channel* m_pSockAChannel;
-            std::unique_ptr<acceptorCallBack> m_callBack;
-            EventLoop* m_pLoop;
+            int m_acceptSocketFd;
+            Channel m_acceptChannel;
+            acceptorCallBack m_callBack;
+            bool mb_listening;
         };
 
     }
